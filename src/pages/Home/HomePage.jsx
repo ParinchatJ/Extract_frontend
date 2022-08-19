@@ -13,12 +13,12 @@ function homePage() {
           <p>improve your workout game with our help!</p>
           <ButtonHomePage />
         </div>
-        <img src="../../../public/home-page1.gif" />
+        <img src="./home-page1.gif" alt="" />
       </session>
 
       <session className="subcon2">
         <div className="left-subcon2">
-          <img src='../../../public/home-page2.gif' /> 
+          <img src='./home-page2.gif' alt="" /> 
           <div className="subcon2-content">
             <h1>Timer</h1>
             <p>
@@ -54,7 +54,7 @@ function homePage() {
 
       <session className="subcon3">
         <div className="body-subcon3">
-          <img src="../../../public/home-page3.gif" /> 
+          <img src="./home-page3.gif" alt="" /> 
           <div className="content-subcon3">
             <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h1>
             <p>
@@ -71,7 +71,7 @@ function homePage() {
             eligendi, veritatis ea vitae. Odio molestiae quia sit quis ut
             ratione!
           </p>
-          {/* <button /> */}
+          <ButtonHomePage className='buttonHome2' />
         </div>
       </session>
     </div>

@@ -53,7 +53,7 @@ const MyActivity = () => {
       </div> */}
       <div className='container'>
         <h1>My Activity</h1>
-        <a href='/new'><img src='public/assets/akar-icons_circle-plus-fill (1).png'/></a>
+        <a href='/new'><img src='./assets/akar-icons_circle-plus-fill (1).png' alt/></a>
       </div>
 
         <CartList
