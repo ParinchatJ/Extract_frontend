@@ -1,6 +1,23 @@
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  /* line-height: 24px; */
   font-weight: 400;
+}
+
+html, body {
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  
+  background-color: #FFFFF4
+} 
+
+h1 {
+  margin: 0;
+}
+
+p {
+  /* font-family: 'Inter', sans-serif; */
+  font-family: 'DM Sans', sans-serif;
 }
