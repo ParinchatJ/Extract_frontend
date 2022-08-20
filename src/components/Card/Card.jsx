@@ -2,13 +2,13 @@ import React from 'react'
 import './Card.css'
 import { useNavigate } from 'react-router';
 
-export default function Card({card, onRemove}) {
+export default function Card({ card, onRemove }) {
 
     const navigate = useNavigate()
 
     const removeCard = () => {
         onRemove(card)
-      }
+    }
 
     const editCard = () => {
         // OnEditMode(card)
@@ -20,10 +20,10 @@ export default function Card({card, onRemove}) {
         <div className='card'>
             <div className='card-content'>
                 <div className='card-head'>
-                    <p>{card.date}</p>
+                    <p>{card.date.split('T')[0]}</p>
                     <div className='card-button'>
-                        <a onClick={removeCard}><img src='./assets/remove.png' className="remove" alt=''/></a>
-                        <a onClick={editCard}><img src='./assets/edit.png' className="edit" alt=''/></a>
+                        <a onClick={removeCard}><img src='./assets/remove.png' className="remove" alt='' /></a>
+                        <a onClick={editCard}><img src='./assets/edit.png' className="edit" alt='' /></a>
                     </div>
                 </div>
                 <div class="card-body">

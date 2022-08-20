@@ -10,13 +10,13 @@ const api = axios.create({
 export const ActivityForm = () => {
     const navigate = useNavigate()
     const { register, handleSubmit, formState: {errors}, reset } = useForm();
-    const [activityInfo,setActivityInfo] = useState([]);
+    const [selectedActivity,setSelectedActivity] = useState([]);
 
     const onSubmit = data => {
         api.post('http://localhost:3000/user/activities', {
             ...data
         }).then(() => {
-            setActivityInfo(data)
+            setSelectedActivity(data)
             console.log(data)
             reset()
         }).then(() => {
@@ -32,7 +32,7 @@ export const ActivityForm = () => {
                 <select {...register("activity_type",{required: true})}>
                     <option value=""></option>
                     <option value="cardio">cardio</option>
-                    <option value="weight">weight</option>
+                    <option value="weight training">weight training</option>
                 </select>
                 {errors.activity_type && <p className='error'>Please choose your activity types</p>}
                 <br />
