@@ -1,6 +1,6 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home/Home';
+import HomePage from './pages/Home/HomePage';
 import Dashboard from './pages/Dashboard/Dashboard';
 import MyActivity from './pages/MyActivity/MyActivity';
 import NewActivity from './pages/NewActivity/NewActivity';
@@ -16,7 +16,7 @@ const App = () => {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/' element={<HomePage/>}/>
           <Route path='/dashboard' element={<Dashboard />}/>
           <Route path='/activities' element={<MyActivity/>}/>
           <Route path='/new' element={<NewActivity/>}/>

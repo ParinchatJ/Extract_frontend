@@ -1,7 +1,5 @@
 import React from 'react'
 import './Card.css'
-import remove from '../../../public/assets/remove.png';
-import edit from '../../../public/assets/edit.png';
 import { useNavigate } from 'react-router';
 
 export default function Card({card, onRemove}) {
@@ -24,8 +22,8 @@ export default function Card({card, onRemove}) {
                 <div className='card-head'>
                     <p>{card.date}</p>
                     <div className='card-button'>
-                        <a onClick={removeCard}><img src={remove} className="remove"/></a>
-                        <a onClick={editCard}><img src={edit} className="edit"/></a>
+                        <a onClick={removeCard}><img src='./assets/remove.png' className="remove" alt=''/></a>
+                        <a onClick={editCard}><img src='./assets/edit.png' className="edit" alt=''/></a>
                     </div>
                 </div>
                 <div class="card-body">
