@@ -2,7 +2,6 @@ import "./NavBar.css";
 import { Link, useLocation } from "react-router-dom";
 import logo from '/assets/logo.png'
 
-
 const NavBar = () => {
   let location = useLocation();
 
