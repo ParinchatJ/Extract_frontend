@@ -4,6 +4,7 @@ import testData from '../../components/CartList/testData'
 import CartList from '../../components/CartList/CardList'
 import axios from 'axios'
 import { useEffect } from 'react'
+import ButtonAddAct from '../../components/ButtonAddAct/ButtonAddAct'
 
 const api = axios.create({
   withCredentials: true
@@ -53,7 +54,7 @@ const MyActivity = () => {
       </div> */}
       <div className='container'>
         <h1>My Activity</h1>
-        <a href='/new'><img src='./assets/akar-icons_circle-plus-fill (1).png' alt/></a>
+        <ButtonAddAct />
       </div>
 
         <CartList
