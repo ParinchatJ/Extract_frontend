@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
+    /* padding: 0 100px; */
     /* background-color: rgb(230, 230, 230); */
     /* position: sticky;
     width: 100%;; */
@@ -24,9 +24,9 @@
     font-weight: 700;
 }
 
-.navbar .logo h1 {
+/* .navbar .logo h1 {
 
-}
+} */
 
 .navbar .logo img {
     height: 3rem;
@@ -60,4 +60,8 @@
     padding: 0.75rem;
     border: 0;
     border-radius: 0.5rem;
+}
+
+.navbar {
+
 }

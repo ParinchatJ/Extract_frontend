@@ -7,16 +7,16 @@ import "./homePage.css";
 function homePage() {
   return (
     <div className="container-homepage">
-      <session className="subcon1">
+      <section className="subcon1">
         <div className="subcon1-content">
           <h1>Asking yourself when to start exercise?</h1>
           <p>improve your workout game with our help!</p>
           <ButtonHomePage />
         </div>
         <img src="./home-page1.gif" alt="" />
-      </session>
+      </section>
 
-      <session className="subcon2">
+      <section className="subcon2">
         <div className="left-subcon2">
           <img src='./home-page2.gif' alt="" /> 
           <div className="subcon2-content">
@@ -50,9 +50,9 @@ function homePage() {
             nulla ut provident voluptates maxime perferendis id accusamus.
           </p>
         </div>
-      </session>
+      </section>
 
-      <session className="subcon3">
+      <section className="subcon3">
         <div className="body-subcon3">
           <img src="./home-page3.gif" alt="" /> 
           <div className="content-subcon3">
@@ -73,7 +73,7 @@ function homePage() {
           </p>
           <ButtonHomePage className='buttonHome2' />
         </div>
-      </session>
+      </section>
     </div>
   );
 }
