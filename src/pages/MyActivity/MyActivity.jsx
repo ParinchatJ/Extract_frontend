@@ -4,11 +4,8 @@ import testData from '../../components/CartList/testData'
 import CartList from '../../components/CartList/CardList'
 import newButton from '/public/assets/akar-icons_circle-plus-fill (1).png'
 import { useEffect } from 'react'
+import ButtonAddAct from '../../components/ButtonAddAct/ButtonAddAct'
 
-// import axios from 'axios'
-// const api = axios.create({
-//   withCredentials: true
-// })
 import api from '/configs/api'
 import Pagination from '../../components/Pagination/Pagination'
 
