@@ -1,0 +1,56 @@
+.activity-form * {
+    /* border: 1px solid red; */
+}
+
+.activity-form{
+    margin: 2rem;;
+    /* width: 720px; */
+    /* width: 700px; */
+    display: flex;
+    justify-content: center;
+}
+.activity-form label {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.activity-form select, .activity-form input, .activity-form textarea, .activity-form button {
+    font-family: 'DM Sans', sans-serif;
+    padding: 0.25rem;
+    margin: 0.75rem 0;
+    box-sizing: border-box;
+    width: 320px;
+    height: 32px;
+    border: 2px solid black;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+.activity-form textarea {
+    min-height: 72px;
+    resize: vertical;
+}
+
+.activity-form button {
+    margin: 0.75rem 0;
+    background: black;
+    color: white;
+    height: 3rem;
+    transition: all 0.1s;
+
+}
+.activity-form button:hover {
+    margin: 0.75rem 0;
+    background: #dafc3d;
+    color: black;
+    height: 3rem;
+    transition: all 0.1s;
+}
+
+
+.activity-form .error {
+    color: red;
+    margin: 0;
+    padding: 0;
+}

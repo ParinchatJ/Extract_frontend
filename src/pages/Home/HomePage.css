@@ -8,7 +8,7 @@
   flex-direction: column;
 }
 
-/* session 1 */
+/* section 1 */
 
 .container-homepage .subcon1 {
   display: flex;
@@ -48,7 +48,7 @@
   text-align: start;
 }
 
-/* session 2 */
+/* section 2 */
 
 .subcon2 {
   display: flex;
@@ -92,7 +92,7 @@
   align-items: center;
 }
 
-/* session 3  */
+/* section 3  */
 
 .container-homepage .subcon3 {
   display: flex;

@@ -6,7 +6,7 @@ import "./ButtonHomePage.css";
 function ButtonHomePage() {
   return (
     <div className="ButtonHomePage-container">
-      <Link to="#">
+      <Link to="/signin">
         <button className="button-homePage">Get Started For Free</button>
       </Link>
     </div>
