@@ -6,6 +6,7 @@ import NewActivity from './pages/NewActivity/NewActivity';
 import UpdateActivity from './pages/UpdateActivity/UpdateActivity';
 import Setting from './pages/Setting/Setting';
 import SignIn from './pages/SignIn/SignIn';
+import SignUp from './pages/SignUp/SignUp';
 import NotFound from './pages/NotFound/NotFound';
 import NavBar from './components/NavBar/NavBar';
 
@@ -19,6 +20,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<HomePage/>}/>
           <Route path='/signin' element={<SignIn />}/>
+          <Route path='/signup' element={<SignUp />}/>
           <Route path='/dashboard' element={<Dashboard />}/>
           <Route path='/activities' element={<MyActivity/>}/>
           <Route path='/new' element={<NewActivity/>}/>
