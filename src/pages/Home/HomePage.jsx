@@ -13,12 +13,12 @@ function homePage() {
           <p>improve your workout game with our help!</p>
           <ButtonHomePage />
         </div>
-        <img src="./home-page1.gif" alt="" />
+        <img src="./assets/home-page1.gif" alt="" />
       </section>
 
       <section className="subcon2">
         <div className="left-subcon2">
-          <img src='./home-page2.gif' alt="" /> 
+          <img src='./assets/home-page2.gif' alt="" /> 
           <div className="subcon2-content">
             <h1>Timer</h1>
             <p>
@@ -54,7 +54,7 @@ function homePage() {
 
       <section className="subcon3">
         <div className="body-subcon3">
-          <img src="./home-page3.gif" alt="" /> 
+          <img src="./assets/home-page3.gif" alt="" /> 
           <div className="content-subcon3">
             <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h1>
             <p>
