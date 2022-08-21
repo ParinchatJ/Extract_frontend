@@ -2,7 +2,6 @@ import './MyActivity.css'
 import { useState } from 'react'
 import testData from '../../components/CartList/testData'
 import CartList from '../../components/CartList/CardList'
-import newButton from '/public/assets/akar-icons_circle-plus-fill (1).png'
 import { useEffect } from 'react'
 import ButtonAddAct from '../../components/ButtonAddAct/ButtonAddAct'
 
@@ -54,7 +53,7 @@ const MyActivity = () => {
       </div> */}
       <div className='container'>
         <h1>My Activity</h1>
-        <a href='/new'><img src={newButton} /></a>
+        <ButtonAddAct />
       </div>
       <Pagination
         cardPerPage={cardPerPage}
