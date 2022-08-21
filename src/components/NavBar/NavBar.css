@@ -3,10 +3,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: 0 100px; */
-    /* background-color: rgb(230, 230, 230); */
-    /* position: sticky;
-    width: 100%;; */
+    padding: 0 2rem;
+    /* max-width: 1280px; */
 }
 
 .navbar a {
@@ -60,8 +58,4 @@
     padding: 0.75rem;
     border: 0;
     border-radius: 0.5rem;
-}
-
-.navbar {
-
 }
