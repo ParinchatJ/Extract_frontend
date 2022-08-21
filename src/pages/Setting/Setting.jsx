@@ -5,6 +5,7 @@ import { appendErrors, useForm } from 'react-hook-form';
 import api from '/configs/api'
 import SettingForm from '../../components/SettingForm/SettingForm';
 import SetGoalForm from '../../components/SetGoalForm/SetGoalForm';
+import NavBar from '../../components/NavBar/NavBar';
 
 
 const Setting = () => {
@@ -22,6 +23,8 @@ const Setting = () => {
 
 
   return (
+    <>
+    <NavBar />
     <div className='setting'>
       <div className='container'>
         <SettingForm />
@@ -29,6 +32,7 @@ const Setting = () => {
       </div>
         <button onClick={signOut}>Sign out</button>
     </div>
+    </>
   )
 }
 

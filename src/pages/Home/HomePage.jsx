@@ -1,11 +1,14 @@
 import React from "react";
 
 import ButtonHomePage from '../../components/ButtonHomePage/ButtonHomePage'
+import NavBar from "../../components/NavBar/NavBar";
 
 import "./homePage.css";
 
 function homePage() {
   return (
+    <>
+    <NavBar />
     <div className="container-homepage">
       <section className="subcon1">
         <div className="subcon1-content">
@@ -75,6 +78,7 @@ function homePage() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 
