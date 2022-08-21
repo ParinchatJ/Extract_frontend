@@ -49,7 +49,7 @@ export const EditActivityForm = ({activity_id, selectedActivity, setSelectedActi
                 <br/>
 
                 <label htmlFor="date">Date</label><br />
-                <input type="date" value={selectedActivity.date.split('T')[0]} {...register("date",{ required: true})}/>
+                <input type="date" defaultValue={selectedActivity.date.split('T')[0]} {...register("date",{ required: true})}/>
                 {errors.date && <p className='error'>Please enter the date</p>}                                                                           
                 <br/>
 
