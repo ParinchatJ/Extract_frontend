@@ -24,7 +24,7 @@ const SignInForm = () => {
       .then(() => {
         console.log("login success");
         window.alert("login success, welcome!");
-        navigate("../activities");
+        navigate("../dashboard");
       })
       .catch(() => {
         console.log("Login failed");

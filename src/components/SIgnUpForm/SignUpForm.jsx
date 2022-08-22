@@ -7,22 +7,18 @@ import NavBar from '../NavBar/NavBar'
 import './SignUpForm.css'
 
 const SignUpForm = () => {
-  const navigate = useNavigate();
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    defaultValues: {
-      username: "",
-      name: "",
-      email: "",
-      password: "",
-      dateOfBirth: "",
-      height: "",
-      weight: "",
-    },
-  });
+    const navigate = useNavigate()
+    const { register, handleSubmit, formState: { errors }, } = useForm({
+        // defaultValues: {
+        //     username: '',
+        //     name: '',
+        //     email: '',
+        //     password: '',
+        //     dateOfBirth: '',
+        //     height: '',
+        //     weight: ''
+        // }
+    });
 
   const onSubmit = (data) => {
     api
@@ -31,7 +27,8 @@ const SignUpForm = () => {
         console.log(data);
       })
       .then(() => {
-        navigate("../activities");
+                console.log(document.cookie)
+        navigate("../dashboard");
       });
   };
 

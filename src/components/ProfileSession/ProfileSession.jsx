@@ -3,7 +3,19 @@ import ButtonAddAct from "../ButtonAddAct/ButtonAddAct";
 
 import "./ProfileSession.css";
 
-function ProfileSession() {
+const ProfileSession = ({ user }) => {
+
+  let age = 0
+  let birthdate = ''
+  if (user.date_of_birth) {
+    birthdate = user.date_of_birth.slice(0, 10);
+    let year = Number(user.date_of_birth.substr(0, 4))
+    let today = new Date();
+    age = today.getFullYear() - year
+  }
+
+
+
   return (
     <div className="subconright-dash">
       <div className="upright-dash">
@@ -13,27 +25,27 @@ function ProfileSession() {
       <div className="downright-dash">
         <div className="content1">
           <div className="nameprofile">
-            <h2>John Doe</h2>
-            <p>@username</p>
+            <h2>{user.name || 'Anonymous'}</h2>
+            <p>@{user.username || 'username'}</p>
           </div>
-          <p className="inspiration-input-profile">รับค่า inspiration มา</p>
+          <p className="inspiration-input-profile">{user.inspiration}</p>
         </div>
         <div className="content2">
           <div className="height">
             <p>Height</p>
-            <h2>166</h2>
+            <h2>{user.height || '-'}</h2>
           </div>
           <div className="weight">
             <p>Weight</p>
-            <h2>99</h2>
+            <h2>{user.weight || '-'}</h2>
           </div>
         </div>
         <div className="content3">
           <p className="profile-bio">Bio</p>
           <div className="perdata">
-            <p>Name: John Doe</p>
-            <p>Birth Date: 1/1/1111</p>
-            <p>Age: 22</p>
+            <p>Name: {user.name || 'Anonymous'}</p>
+            <p>Birth Date: {birthdate || '0000-00-00'}</p>
+            <p>Age: {age || '99'}</p>
           </div>
           <ButtonAddAct />
         </div>
