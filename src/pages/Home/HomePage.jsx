@@ -1,11 +1,14 @@
 import React from "react";
 
 import ButtonHomePage from '../../components/ButtonHomePage/ButtonHomePage'
+import NavBar from "../../components/NavBar/NavBar";
 
 import "./homePage.css";
 
 function homePage() {
   return (
+    <>
+    <NavBar />
     <div className="container-homepage">
       <section className="subcon1">
         <div className="subcon1-content">
@@ -13,12 +16,12 @@ function homePage() {
           <p>improve your workout game with our help!</p>
           <ButtonHomePage />
         </div>
-        <img src="./home-page1.gif" alt="" />
+        <img src="./assets/home-page1.gif" alt="" />
       </section>
 
       <section className="subcon2">
         <div className="left-subcon2">
-          <img src='./home-page2.gif' alt="" /> 
+          <img src='./assets/home-page2.gif' alt="" /> 
           <div className="subcon2-content">
             <h1>Timer</h1>
             <p>
@@ -54,7 +57,7 @@ function homePage() {
 
       <section className="subcon3">
         <div className="body-subcon3">
-          <img src="./home-page3.gif" alt="" /> 
+          <img src="./assets/home-page3.gif" alt="" /> 
           <div className="content-subcon3">
             <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h1>
             <p>
@@ -75,6 +78,7 @@ function homePage() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

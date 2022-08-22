@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import BarChart from '../../components/BarChart/BarChart'
+import BarChart from "../../components/BarChart/BarChart";
 import ProfileSession from "../../components/ProfileSession/ProfileSession";
+import NavBar from "../../components/NavBar/NavBar";
 import api from '/configs/api'
 import "./Dashboard.css";
 import CartList from '../../components/CartList/CardList';
@@ -124,9 +125,9 @@ const Dashboard = () => {
         </div>
       </section>
 
+      
 
-
-      {/*<section className="subconright-dash">
+      {/*<session className="subconright-dash">
         <div className="upright-dash">
           {/* only set backgroung color 
           <img src="#" alt="" />
@@ -159,7 +160,7 @@ const Dashboard = () => {
             {/* <button /> ปุ่มบวก 
           </div>
         </div>
-      </section>*/}
+      </session>*/}
     </div>
   );
 };

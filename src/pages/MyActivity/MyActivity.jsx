@@ -3,6 +3,7 @@ import { useState } from 'react'
 import CartList from '../../components/CartList/CardList'
 import { useEffect } from 'react'
 import ButtonAddAct from '../../components/ButtonAddAct/ButtonAddAct'
+import NavBar from '../../components/NavBar/NavBar'
 
 import api from '/configs/api'
 import Pagination from '../../components/Pagination/Pagination'
@@ -46,6 +47,8 @@ const MyActivity = () => {
   }
 
   return (
+    <>
+    <NavBar />
     <div className="my-activity">
       {/* <div className='sidebar'>
         <h1>sidebar</h1>
@@ -67,6 +70,7 @@ const MyActivity = () => {
         loading={loading}
       />
     </div>
+    </>
   )
 }
 
