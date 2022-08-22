@@ -1,47 +1,68 @@
-import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
-import { appendErrors, useForm } from 'react-hook-form';
-import api from '/configs/api'
+import React, {useState} from "react";
+import { useForm } from "react-hook-form";
+import SetProfilePic from "../SetProfilePic/SetProfilePic";
+import "./SetGoalForm.css";
 
-
-const SetGoalForm = () => {
-
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-
-
-  // user prototype
-  const [user, setUser] = useState([
-    {
-      goal: {
-        weeklyGoal: 4,
-        weightGoal: 49,
-        inspiration: "ware kid's cloth",
-      }
-    }
-  ])
-
-
-  return (
-    <div className='setgoal'>
-
-      <form className='set-goal' onSubmit={handleSubmit(console.log)}>
-          <div className='update-goal'>
-            <div>
-              <h2 id='goal-h2'>Update your goal</h2>
-              <div className='goal-form'>
-                <label>weekly goal</label>
-                <input type='number' defaultValue={user[0].goal.weeklyGoal} placeholder='days per week' {...register('weekly-goal')} />
-                <label>weight</label>
-                <input type='number' defaultValue={user[0].goal.weightGoal} placeholder='goal weight' {...register('weight-goal')} />
-                <label>inspiration</label>
-                <input type='text' defaultValue={user[0].goal.inspiration} placeholder='inspiration' {...register('inspiration')} />
-              </div>
-            </div>
-          </div>
-        <button type='submit' style={{ width: '328px', height: '49px' }}>Save</button>
-      </form>
+export default function SetGoal() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }, reset
+  } = useForm();
+  const [goalInfo, setGoalInfo] = useState([]);
+  const onSubmit = (data) => {
+    setGoalInfo(data);  
+    console.log(data);
+    reset()
+  };
+  return (  
+    <div className="setGoal">
+      <div className="setGoalPic">
+        {/* <SetProfilePic /> */}
+      </div>
+      <div className="setGoalForm">
+        <h2>Set Your Goal</h2>
+        < form onSubmit={handleSubmit(onSubmit)}>
+          <label>Weekly Goal</label>
+          <br></br>
+          <select {...register("weeklyGoal", { required: true })}>
+            <option value="">Select your goal</option>
+            <option value="Workout 2 days/week">Workout 2 days/week</option>
+            <option value="Workout 3 days/week">Workout 3 days/week</option>
+            <option value="Workout 4 days/week">Workout 4 days/week</option>
+            <option value="Workout 5 days/week">Workout 5 days/week</option>
+            <option value="Workout 6 days/week">Workout 6 days/week</option>
+            <option value="Workout 7 days/week">Workout 7 days/week</option>
+          </select>
+          {errors?.weeklyGoal?.type === "required" && (
+            <p>Goal selection is required</p>
+          )}
+          <br></br>
+          <label>Your Weight</label>
+          <br></br>
+          <input
+            type="number"
+            step="0.001"
+            placeholder="Weight"
+            {...register("weight", { min: 0.5, max: 200, required: true })}
+          />
+          {errors.weight && (
+            <p>Weight is required and must between 0.5 kg. and 200 kg.</p>
+          )}
+          <br></br>
+          <label>Your Inspirations</label>
+          <br></br>
+          <textarea
+            placeholder="Inspirations"
+            {...register("Inspirations", { required: true })}
+          />
+          {errors?.Inspirations?.type === "required" && (
+            <p>Inspirations is required</p>
+          )}
+          <br></br>
+          <button>Set up</button>
+        </form>
+      </div>
     </div>
-  )
+  );
 }
-
-export default SetGoalForm

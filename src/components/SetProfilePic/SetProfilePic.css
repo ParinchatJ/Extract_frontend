@@ -1,0 +1,12 @@
+.container-setpic {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.container-setpic .img-picprofile {
+    margin-bottom: 20px;
+}
+
+.container-setpic input {
+    border: 1.5px solid black;
+}

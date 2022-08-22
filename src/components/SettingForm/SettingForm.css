@@ -1,0 +1,26 @@
+.setting form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.setting form .setting-forms {
+    margin-bottom: 30px;
+}
+
+/* .setting form .setting-forms .picture-name {
+    display: flex;
+    align-items: center;
+} */
+
+.headinfo {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.personal-infomation {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}

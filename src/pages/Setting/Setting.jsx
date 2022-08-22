@@ -6,6 +6,7 @@ import api from '/configs/api'
 import SettingForm from '../../components/SettingForm/SettingForm';
 import SetGoalForm from '../../components/SetGoalForm/SetGoalForm';
 import NavBar from '../../components/NavBar/NavBar';
+import SetProfilePic from '../../components/SetProfilePic/SetProfilePic';
 
 
 const Setting = () => {
@@ -27,10 +28,11 @@ const Setting = () => {
     <NavBar />
     <div className='setting'>
       <div className='container'>
+        {/* <SetProfilePic /> */}
         <SettingForm />
-        <SetGoalForm />
+        {/* <SetGoalForm /> */}
       </div>
-        <button onClick={signOut}>Sign out</button>
+        {/* <button onClick={signOut}>Sign out</button> */}
     </div>
     </>
   )
