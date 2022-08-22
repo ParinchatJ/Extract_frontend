@@ -56,7 +56,7 @@ const SettingForm = () => {
               <div id='info-container' >
                 <div className='picture-name'>
                   <div className='profile-pic' onMouseEnter={showPicUpdate} onMouseLeave={hidePicUpdate}>
-                    <img src={picture} />
+                    <img src={picture} alt/>
                     <input id='update-profile' type='file' />
                     {picUpdate && <label htmlFor='update-profile'>Choose Photo</label>}
                   </div>
