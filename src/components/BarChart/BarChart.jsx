@@ -1,39 +1,83 @@
 import Chart from "react-apexcharts";
 import React, { useState, useEffect } from "react";
 
-function BarChart() {
+const BarChart = ({ dailyStats, loading }) => {
+  if (loading) return <h2>Loading..</h2>
+
   const [trackingName, setTrackingName] = useState([]);
   const [trackingValue, setTrackingValue] = useState([]);
 
-  useEffect
-    (() => {
-      const recentSevenDay = [];
-      const trackingValuePerDay = [];
 
-      const getTrackinkRecord = async () => {
-        const dataRequest = await fetch("#");
-        const dataResponse = await dataRequest.json();
+  const getWeekDay = (firstDay) => {
+    const day = firstDay.getDay()
+    switch (day) {
+      case 0:
+        return ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
+        break
+      case 1:
+        return ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+        break
+      case 2:
+        return ['tue', 'wed', 'thu', 'fri', 'sat', 'sun', 'mon']
+        break
+      case 3:
+        return ['wed', 'thu', 'fri', 'sat', 'sun', 'mon', 'tue']
+        break
+      case 4:
+        return ['thu', 'fri', 'sat', 'sun', 'mon', 'tue', 'wed']
+          break
+      case 5:
+        return ['fri', 'sat', 'sun', 'mon', 'tue', 'wed', 'thu']
+        break
+      case 6:
+        return ['sat', 'sun', 'mon', 'tue', 'wed', 'thu', 'fri']
+        break
+    }
+  }
 
-        //console.log(dataResponse); -> array
+  const getWeeklyStats = () => {
+    //get last 7 days' date
+    const sevenDays = [...Array(7).keys()].map(index => {
+      const date = new Date();
+      date.setDate(date.getDate() - index);
+      return date.toISOString().slice(0, 10);
+    });
+    // console.log('date', sevenDays)
 
-        //ดึงข้อมูลมาทำชื่อกราฟแกน x -> ดึง 7 วันล่าสุด
-        for (let i = 0; i < dataResponse.length; i++) {
-          recentSevenDay.push(dataResponse[i].recent7dayInDB); //ดึงจาก database ที่เก็บ 7 วันล่าสุด ??
-          trackingValuePerDay.push(dataResponse[i].valueExerciseInDB); //ดึงจาก database ที่เก็บ 7 วันล่าสุด ??
+    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
+
+    // get last 7 days' data
+    let currentWeek = []
+    for (let day of dailyStats) {
+      if (Date.parse(day._id) >= Date.parse(sevenDaysAgo)) {
+        day._id = day._id.slice(0, 10)
+        currentWeek.push(day)
+      }
+    }
+    // console.log('test', currentWeek)
+
+    // keep data in weeklyStats
+    let weeklyStats = {}
+    for (let i = 0; i < sevenDays.length; i++) {
+      for (let date of currentWeek) {
+        if (sevenDays[i] == date._id) {
+          weeklyStats[sevenDays[i]] = date.total_duration
+          break;
         }
+        weeklyStats[sevenDays[i]] = 0
+      }
+    }
+    // console.log('weeklyStats', weeklyStats)
+    setTrackingValue(Object.values(weeklyStats))
+    // set keys of chart
+    // setTrackingName(Object.keys(weeklyStats))
+    setTrackingName(getWeekDay(sevenDaysAgo))
 
-        // console.log(recentSevenDay);
-        // console.log(trackingValuePerDay);
+  }
 
-        setTrackingName(recentSevenDay);
-        setTrackingValue(trackingValuePerDay);
-      };
-
-      getTrackinkRecord();
-    },
-    []);
-
-
+  useEffect(() => {
+    getWeeklyStats()
+  }, [])
 
   return (
     <React.Fragment>
@@ -46,8 +90,8 @@ function BarChart() {
           height={268}
           series={[
             {
-              name: "Track History",
-              data: [1,2,3,4,5,6,7],//trackingValue,   //ก่อนเอามาใช้ตรงนี้ต้องเปลี่ยนจาก objarray -> array ก่อน | ยังไม่ทำ!!
+              name: "Total Duration",
+              data: trackingValue,
             },
           ]}
           options={{
@@ -66,7 +110,7 @@ function BarChart() {
 
             xaxis: {
               tickPlacement: "on",
-              categories: trackingName,  //ก่อนเอามาใช้ตรงนี้ต้องเปลี่ยนจาก objarray -> array ก่อน | ยังไม่ทำ!!
+              categories: trackingName,
               title: {
                 text: "Day per week",
                 style: { color: "#F1C40F", fontSize: 17 },  //สีชื่อแกน x

@@ -1,9 +1,7 @@
-import React from 'react'
 import './Card.css'
 import { useNavigate } from 'react-router';
 
-export default function Card({ card, onRemove }) {
-
+const Card = ({ card, onRemove }) => {
     const navigate = useNavigate()
 
     const removeCard = () => {
@@ -11,8 +9,7 @@ export default function Card({ card, onRemove }) {
     }
 
     const editCard = () => {
-        // OnEditMode(card)
-        navigate(`../edit/${card._id}`, { replace: true })
+        navigate(`../edit/${card._id}`)
     }
 
 
@@ -22,8 +19,12 @@ export default function Card({ card, onRemove }) {
                 <div className='card-head'>
                     <p>{card.date.split('T')[0]}</p>
                     <div className='card-button'>
-                        <a onClick={removeCard}><img src='./assets/remove.png' className="remove" alt='remove' /></a>
-                        <a onClick={editCard}><img src='./assets/edit.png' className="edit" alt='edit' /></a>
+                        <a onClick={removeCard}>
+                            <img src='./assets/remove.png' className="remove" alt='remove' />
+                        </a>
+                        <a onClick={editCard}>
+                            <img src='./assets/edit.png' className="edit" alt='edit' />
+                        </a>
                     </div>
                 </div>
                 <div className="card-body">
@@ -37,10 +38,8 @@ export default function Card({ card, onRemove }) {
                     </div>
                 </div>
             </div>
-            {/* <div className='card-button'>
-                <a><img src={edit} className="edit"/></a>
-                <a onClick={removeCard}><img src={remove} className="remove"/></a>
-            </div> */}
         </div>
     )
 }
+
+export default Card
