@@ -52,14 +52,15 @@ const SignUpForm = () => {
             />
             <br />
             {errors.username && errors.username.type === "required" && (
-              <span>Invalid or empty username.</span>
+              <span className="error-signup">Invalid or empty username.</span>
             )}
             {errors.username &&
               (errors.username.type === "minLength" ||
                 errors.username.type === "maxLength") && (
-                <span>Username should be between 6-15 characters.</span>
+                <span  className="error-signup">Username should be between 6-15 characters.</span>
               )}
-
+            <br />
+            <br />
             <label htmlFor="name">Name</label>
             <br />
             <input
@@ -73,14 +74,15 @@ const SignUpForm = () => {
             />
             <br />
             {errors.name && errors.name.type === "required" && (
-              <span>What's your name?</span>
+              <span  className="error-signup">What's your name?</span>
             )}
             {errors.name &&
               (errors.name.type === "minLength" ||
                 errors.name.type === "maxLength") && (
-                <span>Name should be between less than 50 characters.</span>
+                <span  className="error-signup">Name should be between less than 50 characters.</span>
               )}
-
+            <br />
+            <br />
             <label htmlFor="email">Email</label>
             <br />
             <input
@@ -90,9 +92,10 @@ const SignUpForm = () => {
             />
             <br />
             {errors.email && errors.email.type === "required" && (
-              <span>Please enter a valid email.</span>
+              <span  className="error-signup">Please enter a valid email.</span>
             )}
-
+            <br />
+            <br />
             <label htmlFor="password">Password</label>
             <br />
             <input
@@ -107,14 +110,15 @@ const SignUpForm = () => {
             />
             <br />
             {errors.password && errors.password.type === "required" && (
-              <span>Password is required</span>
+              <span  className="error-signup">Password is required</span>
             )}
             {errors.password &&
               (errors.password.type === "minLength" ||
                 errors.password.type === "maxLength") && (
-                <span>Your password must be between 8-16 characters.</span>
+                <span className="error-signup">Your password must be between 8-16 characters.</span>
               )}
-
+            <br />
+            <br />
             <label htmlFor="dateOfBirth">Date of Birth</label>
             <br />
             <input
@@ -124,7 +128,8 @@ const SignUpForm = () => {
               placeholder="Date of birth"
             />
             <br />
-
+            <br />
+            <br />
             <label htmlFor="height">Height</label>
             <br />
             <input
@@ -135,9 +140,10 @@ const SignUpForm = () => {
             />
             <br />
             {errors.height && errors.height.type === "required" && (
-              <span>What's your height?</span>
+              <span  className="error-signup">What's your height?</span>
             )}
-
+            <br />
+            <br />
             <label htmlFor="weight">Weight</label>
             <br />
             <input
@@ -148,10 +154,10 @@ const SignUpForm = () => {
             />
             <br />
             {errors.weight && errors.weight.type === "required" && (
-              <span>What's your weight?</span>
+              <span  className="error-signup">What's your weight?</span>
             )}
 
-            <input type="submit" />
+            <input className="submit-signup" type="submit" />
           </form>
         </div>
       </section>
