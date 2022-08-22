@@ -67,10 +67,6 @@ const Dashboard = () => {
           <div className="upleftsub">
             <div className="upleftsub-head">
               <h1>My Activity</h1>
-              <div className="userhead">
-                <img src="./assets/Group 36.png" alt="" style={profileUpSize} />
-                <p>@{user.username || "username"}</p>
-              </div>
             </div>
             <div className="upleftsub-board">
               <div className="goal-dash">
@@ -120,7 +116,6 @@ const Dashboard = () => {
             </div>
             <div className="recent-content">
               <CartList cards={recentCards} />
-              {/* <div>เขียนในสี่เหลี่ยมแต่ลองถามคุณตาลดูว่าจะเปลี่ยนมั้ย</div> */}
             </div>
           </div>
         </section>
