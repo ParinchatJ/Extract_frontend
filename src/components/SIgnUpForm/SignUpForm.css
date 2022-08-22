@@ -1,20 +1,28 @@
 .container-signup {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .container-signup {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-signup .img-signup{
+    display: none;
+  }
 }
 
 .container-signup .img-signup {
   width: 50%;
   height: 150vh;
   background-color: #fb9b8b;
-}
-
-.container-signup .img-signup {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
+
 
 .container-signup .img-signup .pic1 {
   display: flex;
@@ -55,11 +63,11 @@
 }
 
 .submit-signup {
-    margin: 40px 0;
-    background: #000;
-    color: white;
-    height: 3rem;
-    transition: all 0.1s;
+  margin: 40px 0;
+  background: #000;
+  color: white;
+  height: 3rem;
+  transition: all 0.1s;
 }
 
 .submit-signup:hover {
@@ -71,5 +79,5 @@
 }
 
 .error-signup {
-    color: red;
+  color: red;
 }
