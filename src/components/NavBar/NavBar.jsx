@@ -28,7 +28,7 @@ const NavBar = () => {
       nav = <>
         <Link to="/activities">My Activity</Link>
         <Link to="/dashboard">Dashboard</Link>
-        <Link to="/setting">Setting</Link>
+        <Link className="settingbutton" to="/setting">Setting</Link>
       </>
       break;
   }
