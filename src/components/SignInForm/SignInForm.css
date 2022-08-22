@@ -1,10 +1,14 @@
 .container-signin {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .container-signin .img-signin {
     background-color: #C7BEF3;
+    width: 50%;
+    height: 100vh;
+
 }
 
 .container-signin .img-signin img {
