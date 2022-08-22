@@ -1,6 +1,5 @@
 import './MyActivity.css'
 import { useState } from 'react'
-import testData from '../../components/CartList/testData'
 import CartList from '../../components/CartList/CardList'
 import { useEffect } from 'react'
 import ButtonAddAct from '../../components/ButtonAddAct/ButtonAddAct'
@@ -21,7 +20,7 @@ const MyActivity = () => {
     setCards(response.data)
     setLoading(false)
   }
-
+  
   useEffect(() => {
     getData()
   }, [])

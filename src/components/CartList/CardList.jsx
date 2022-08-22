@@ -11,7 +11,6 @@ export default function CardList({cards, onRemove, loading}) {
                 return <Card
                   card={card}
                   key={key}
-                  // OnEditMode={OnEditMode}
                   onRemove={onRemove}
                   />
             })

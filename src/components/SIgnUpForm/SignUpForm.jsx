@@ -6,15 +6,15 @@ import api from '/configs/api'
 const SignUpForm = () => {
     const navigate = useNavigate()
     const { register, handleSubmit, formState: { errors }, } = useForm({
-        defaultValues: {
-            username: '',
-            name: '',
-            email: '',
-            password: '',
-            dateOfBirth: '',
-            height: '',
-            weight: ''
-        }
+        // defaultValues: {
+        //     username: '',
+        //     name: '',
+        //     email: '',
+        //     password: '',
+        //     dateOfBirth: '',
+        //     height: '',
+        //     weight: ''
+        // }
     });
 
     
@@ -24,7 +24,8 @@ const SignUpForm = () => {
                 console.log(data)
             })
             .then(() => {
-                navigate('../activities');
+                console.log(document.cookie)
+                navigate('../dashboard');
             })
     }
 
