@@ -3,7 +3,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 0 0 2rem;
+    background-color: #FDFEFE;
+    border-bottom: 2px solid black;
     /* max-width: 1280px; */
 }
 
@@ -22,6 +24,40 @@
     font-weight: 700;
 }
 
+/* set up button */
+
+.navbar .signinbutton {
+    /* margin-right: 30px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DAFC3D;
+    height: 72px;
+    width: 140px;
+    border-left: 2px solid black;
+}
+
+.navbar .signupbutton {
+    /* margin-right: 30px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DAFC3D;
+    height: 72px;
+    width: 140px;
+    border-left: 2px solid black;
+}
+
+.navbar .startbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DAFC3D;
+    height: 72px;
+    width: 140px;
+    border-left: 2px solid black;
+}
+
 /* .navbar .logo h1 {
 
 } */
@@ -38,7 +74,7 @@
 
 .navbar nav a {
     font-size: 1rem;
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 .navbar nav a:hover {
