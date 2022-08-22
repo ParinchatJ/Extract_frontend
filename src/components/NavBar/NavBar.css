@@ -58,6 +58,10 @@
     border-left: 2px solid black;
 }
 
+.navbar .settingbutton {
+    margin-right: 30px;
+}
+
 /* .navbar .logo h1 {
 
 } */
