@@ -11,25 +11,25 @@ const NavBar = () => {
     case "/":
       nav = <>
         <Link to="/signin">Sign In</Link>
-        <Link to="/signup">Get Statrted</Link>
+        <Link className="startbutton" to="/signup">Get Statrted</Link>
       </>
       break;
     case "/signin":
       nav = <>
-        <Link to="/signup">Sign Up</Link>
+        <Link className="signinbutton" to="/signup">Sign Up</Link>
       </>
       break;
     case "/signup":
     case "/setgoal":
       nav = <>
-        <Link to="/signin">Sign In</Link>
+        <Link className="signupbutton" to="/signin">Sign In</Link>
       </>
       break;
     default:
       nav = <>
         <Link to="/user/activities">My Activity</Link>
         <Link to="/user/dashboard">Dashboard</Link>
-        <Link to="/user/setting">Setting</Link>
+        <Link className="settingbutton" to="/user/setting">Setting</Link>
       </>
       break;
   }
