@@ -1,6 +1,6 @@
 import React from "react";
 import ButtonAddAct from "../ButtonAddAct/ButtonAddAct";
-
+import getAvatar from "../../../public/assets/avatars/avatars";
 import "./ProfileSession.css";
 
 const ProfileSession = ({ user }) => {
@@ -21,7 +21,7 @@ const ProfileSession = ({ user }) => {
     <div className="subconright-dash">
       <div className="upright-dash">
         {/* only set backgroung color */}
-        <img src="./assets/Group 36.png" alt="" />
+        <img src={getAvatar(user.profile_picture)} alt="" />
       </div>
       <div className="downright-dash">
         <div className="content1">
