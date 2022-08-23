@@ -19,7 +19,7 @@ const SetGoalForm = ({ user }) => {
 
   const updateGoal = (data) => {
     console.log('test', data)
-    api.patch(`user/goal`, data)
+    api.patch('user/goal', data)
     .then(response => {
       console.log(response.data)
       window.alert('goal setted')
@@ -41,7 +41,7 @@ const SetGoalForm = ({ user }) => {
         min='1'
         max='7'
         className='scale'
-        defaultValue={user.goal_weight}
+        defaultValue={user.weekly_goal}
         {...register("weekly_goal")}
         />
          <div className='scale-num'>
@@ -76,9 +76,9 @@ const SetGoalForm = ({ user }) => {
         <label htmlFor="inspiration">inspiration</label>
         <textarea
           placeholder="inspiration"
-          defaultValue={user.inspiration}
+          // defaultValue={user.inspiration}
           {...register("inspiration")}
-        />
+        >{user.inspiration}</textarea>
         {
         errors.inspiration&& 
           <p className="error">Inspirations is required</p>

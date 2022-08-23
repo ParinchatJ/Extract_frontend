@@ -27,7 +27,11 @@ const SignUpForm = () => {
   const onSubmit = async (data) => {
     const response = await api.post("auth/signup", data);
     console.log(response.data);
-    navigate("../setgoal");
+    const preLogin = await api.post("auth/signin", {
+      account: data.username,
+      password: data.password,
+    })
+    navigate("/setgoal");
   };
 
   return (
