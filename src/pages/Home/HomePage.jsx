@@ -4,6 +4,7 @@ import ButtonHomePage from '../../components/ButtonHomePage/ButtonHomePage'
 import NavBar from "../../components/NavBar/NavBar";
 
 
+
 function homePage() {
   return (
     <>

@@ -61,7 +61,7 @@ const SignUpForm = () => {
             </span>
           )}
         <br />
-        <br />
+        
         <label htmlFor="name">Name</label>
         <br />
         <input
@@ -85,7 +85,7 @@ const SignUpForm = () => {
             </span>
           )}
         <br />
-        <br />
+       
         <label htmlFor="email">Email</label>
         <br />
         <input
@@ -98,7 +98,7 @@ const SignUpForm = () => {
           <span className="error-signup">Please enter a valid email.</span>
         )}
         <br />
-        <br />
+      
         <label htmlFor="password">Password</label>
         <br />
         <input
@@ -122,7 +122,7 @@ const SignUpForm = () => {
               Your password must be between 8-16 characters.
             </span>
           )}
-        <br />
+       
         <br />
         <label htmlFor="dateOfBirth">Date of Birth</label>
         <br />
@@ -133,8 +133,7 @@ const SignUpForm = () => {
           placeholder="Date of birth"
         />
         <br />
-        <br />
-        <br />
+     
         <label htmlFor="height">Height</label>
         <br />
         <input
@@ -148,7 +147,7 @@ const SignUpForm = () => {
           <span className="error-signup">What's your height?</span>
         )}
         <br />
-        <br />
+       
         <label htmlFor="weight">Weight</label>
         <br />
         <input
