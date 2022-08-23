@@ -46,7 +46,7 @@
 
 .subconright-dash .downright-dash .content2 {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .subconright-dash .downright-dash .content2 .height {
@@ -57,6 +57,7 @@
     background-color: #fff;
     border-radius: 10px;
     padding: 15px 35px 15px 35px;
+    margin-right: 30px;
 }
 
 .subconright-dash .downright-dash .content2 .height p {

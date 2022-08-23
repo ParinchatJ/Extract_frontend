@@ -8,29 +8,40 @@ import SetGoalForm from '../../components/SetGoalForm/SetGoalForm';
 import NavBar from '../../components/NavBar/NavBar';
 
 
+
 const Setting = () => {
-  const navigate = useNavigate();
-  const signOut = () => {
-    const text = 'Are you sure you want to sign out?'
-    if (confirm(text) == true) {
-      api.post('auth/signout')
-      .then(() => {
-          alert('Have a Good Day!')
-          navigate('/')
-        }) 
-    } 
-  }
+  // const navigate = useNavigate();
+  // const signOut = () => {
+  //   const text = 'Are you sure you want to sign out?'
+  //   if (confirm(text) == true) {
+  //     api.post('auth/signout')
+  //     .then(() => {
+  //         alert('Have a Good Day!')
+  //         navigate('/')
+  //       }) 
+  //   } 
+  // }
 
 
   return (
     <>
-    <NavBar />
+    {/* <NavBar />
     <div className='setting'>
       <div className='container'>
         <SettingForm />
         <SetGoalForm />
       </div>
         <button onClick={signOut}>Sign out</button>
+    </div> */}
+    <div className="container-setgoal">
+
+      <session className="left-setgoal">
+        {/* <NavBar /> */}
+          <SetGoalForm />
+      </session>
+      <session className="right-setgoal">
+        <img src='./assets/bubble-gum-success.gif' alt />
+      </session>
     </div>
     </>
   )
