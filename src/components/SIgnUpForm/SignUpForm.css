@@ -45,7 +45,6 @@
 }
 
 .container-signup .formsignup {
-  margin: 0 200px 0 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;

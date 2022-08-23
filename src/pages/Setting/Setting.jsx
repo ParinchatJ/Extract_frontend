@@ -8,6 +8,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import { useEffect } from 'react';
 
 
+
 const Setting = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({})
@@ -51,6 +52,17 @@ const Setting = () => {
         </div>
         <a onClick={signOut}>Sign out</a>
       </div>
+
+      <div className="container-setgoal">
+
+      <session className="left-setgoal">
+        {/* <NavBar /> */}
+          <SetGoalForm />
+      </session>
+      <session className="right-setgoal">
+        <img src='./assets/bubble-gum-success.gif' alt />
+      </session>
+    </div>
     </>
   )
 }

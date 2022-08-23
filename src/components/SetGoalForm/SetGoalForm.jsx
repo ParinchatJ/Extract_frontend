@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
-import { appendErrors, useForm } from 'react-hook-form';
-import api from '/configs/api'
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { appendErrors, useForm } from "react-hook-form";
+import api from "/configs/api";
 
+import "./SetGoalForm.css";
 
 const SetGoalForm = ({ user }) => {
   const navigate = useNavigate();
@@ -85,7 +86,7 @@ const SetGoalForm = ({ user }) => {
         <button type='submit'>{ user ? 'Save': 'Create Account'}</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default SetGoalForm
+export default SetGoalForm;
