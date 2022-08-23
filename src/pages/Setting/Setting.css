@@ -1,26 +1,69 @@
+.setting {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.setting h1 {
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.setting .container {
+  max-width: 1080px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.setting a {
+  margin: 0 auto;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .setting .container {
+    max-width: 1080px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.setting h2 {
+  padding: 0 2rem;
+}
+
+
 /* ลองหน้า set goal */
 
 .container-setgoal {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .container-setgoal .left-setgoal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100vh;
 }
 
 .container-setgoal .right-setgoal {
-    background-color: #C7BEF3;
-    width: 50%;
-    height: 100vh;
+  background-color: #C7BEF3;
+  width: 50%;
+  height: 100vh;
 }
 
 .container-setgoal .right-setgoal img {
-    width: 720px;
-    height: 740px;
+  width: 720px;
+  height: 740px;
 }

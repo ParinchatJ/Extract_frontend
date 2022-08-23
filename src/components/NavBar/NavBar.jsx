@@ -20,15 +20,16 @@ const NavBar = () => {
       </>
       break;
     case "/signup":
+    case "/setgoal":
       nav = <>
         <Link className="signupbutton" to="/signin">Sign In</Link>
       </>
       break;
     default:
       nav = <>
-        <Link to="/activities">My Activity</Link>
-        <Link to="/dashboard">Dashboard</Link>
-        <Link className="settingbutton" to="/setting">Setting</Link>
+        <Link to="/user/activities">My Activity</Link>
+        <Link to="/user/dashboard">Dashboard</Link>
+        <Link className="settingbutton" to="/user/setting">Setting</Link>
       </>
       break;
   }
