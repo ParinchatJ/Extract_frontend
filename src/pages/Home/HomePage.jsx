@@ -3,7 +3,6 @@ import React from "react";
 import ButtonHomePage from '../../components/ButtonHomePage/ButtonHomePage'
 import NavBar from "../../components/NavBar/NavBar";
 
-import "./homePage.css";
 
 function homePage() {
   return (
