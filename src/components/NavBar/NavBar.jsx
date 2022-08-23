@@ -35,14 +35,16 @@ const NavBar = () => {
   }
 
   return (
-    <div className="navbar">
-      <Link to="/" className="logo">
-        <img src={logo} alt='logo' />
-        EXTRACKS
-      </Link>
-      <nav>
-        {nav}
-      </nav>
+    <div className="navbar-container">
+      <div className="navbar">
+        <Link to="/" className="logo">
+          <img src={logo} alt='logo' />
+          EXTRACKS
+        </Link>
+        <nav>
+          {nav}
+        </nav>
+      </div>
     </div>
   );
 };

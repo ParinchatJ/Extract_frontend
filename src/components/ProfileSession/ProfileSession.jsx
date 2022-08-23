@@ -1,12 +1,12 @@
 import React from "react";
 import ButtonAddAct from "../ButtonAddAct/ButtonAddAct";
-import getAvatar from "../../../public/assets/avatars/avatars";
+import getAvatar from "/public/assets/avatars/avatars.js";
 import "./ProfileSession.css";
 
 const ProfileSession = ({ user }) => {
 
   let age = 99
-  let birthdate = ''
+  let birthdate = user.date_of_birth
   // if (!user.date_of_birth) {
   //   birthdate = user.date_of_birth.slice(0, 10);
   //   birthdate = '1998-08-23';
@@ -45,7 +45,7 @@ const ProfileSession = ({ user }) => {
           <p className="profile-bio">Bio</p>
           <div className="perdata">
             <p>Name: {user.name || 'Anonymous'}</p>
-            <p>Birth Date: {birthdate || (new Date()).toString()}</p>
+            <p>Birth Date: {birthdate}</p>
             <p>Age: {age || '99'}</p>
           </div>
           <ButtonAddAct />

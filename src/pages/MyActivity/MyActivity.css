@@ -20,3 +20,8 @@
 .my-activity img {
     height: 4rem;
 } */
+
+.my-activity .cardlist {
+    max-width: 960px;
+    padding: 0 2rem;
+}

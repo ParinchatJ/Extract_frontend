@@ -1,12 +1,18 @@
-.navbar {
-    height: 72px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar-container {
+
     padding: 0 0 0 2rem;
     background-color: #FDFEFE;
     border-bottom: 2px solid black;
-    /* max-width: 1280px; */
+    /* display: flex;
+    justify-content: center; */
+}
+
+.navbar {
+    height: 72px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar a {

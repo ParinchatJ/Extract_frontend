@@ -95,17 +95,22 @@ const BarChart = ({ dailyStats, loading }) => {
             },
           ]}
           options={{
+            chart: {
+              toolbar: {
+                show: false
+              }
+            },
             title: {
               text: "",
-              style: { fontSize: 30 },
+              style: { fontSize: 30, fontFamily: 'Space Grotesk' },
             },
 
             subtitle: {
               text: "",
-              style: { fontSize: 18 },
+              style: { fontSize: 18, fontFamily: 'Space Grotesk'},
             },
 
-            colors: ["#515A5A"],  //สีกราฟแท่ง 
+            colors: ["#000"],  //สีกราฟแท่ง 
             theme: { mode: "light" },
 
             xaxis: {
@@ -113,7 +118,7 @@ const BarChart = ({ dailyStats, loading }) => {
               categories: trackingName,
               title: {
                 text: "Day per week",
-                style: { color: "#F1C40F", fontSize: 17 },  //สีชื่อแกน x
+                style: { color: "#000", fontSize: 17, fontFamily: 'Space Grotesk' },  //สีชื่อแกน x
               },
             },
 
@@ -126,7 +131,7 @@ const BarChart = ({ dailyStats, loading }) => {
               },
               title: {
                 text: "Time (minute)",
-                style: { color: "#F1C40F", fontSize: 17 },  //สีแกน y
+                style: { color: "#000", fontSize: 17, fontFamily: 'Space Grotesk' },  //สีแกน y
               },
             },
 
@@ -140,8 +145,9 @@ const BarChart = ({ dailyStats, loading }) => {
                 return `${val}`;
               },
               style: {
-                colors: ["#F1C40F"],  //text in bar
+                colors: ["#fff"],  //text in bar
                 fontSize: 15,
+                fontFamily: 'Space Grotesk'
               },
             },
           }}

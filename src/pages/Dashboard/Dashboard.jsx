@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import BarChart from "../../components/BarChart/BarChart";
 import ProfileSession from "../../components/ProfileSession/ProfileSession";
 import NavBar from "../../components/NavBar/NavBar";
+import CartList from "../../components/CartList/CardList";
+import goalIcon from '/assets/icons8-trophy-100.png';
+import trackIcon from '/assets/icons8-futures-100.png'
+import recentIcon from '/assets/icons8-track-and-field-skin-type-1-100.png'
 import api from "/configs/api";
 import "./Dashboard.css";
-import CartList from "../../components/CartList/CardList";
 
 const Dashboard = () => {
   const [cards, setCards] = useState([]);
@@ -27,6 +30,7 @@ const Dashboard = () => {
   const getUserInfo = async () => {
     const response = await api.get("user/me");
     setUser(response.data);
+    console.log(user)
   };
 
   const getData = async () => {
@@ -48,10 +52,31 @@ const Dashboard = () => {
   };
   getGoalAchieved();
 
+
+  // get Gretting
+  const [greeting, setGreeting] = useState('Dashboard')
+
+  const getGetting = (user) => {
+    if (user.name) {let greet;
+    let myDate = new Date();
+    let hrs = myDate.getHours();
+
+    if (hrs < 12)
+      greet = 'Good Morning';
+    else if (hrs >= 12 && hrs <= 17)
+      greet = 'Good Afternoon';
+    else if (hrs >= 17 && hrs <= 24)
+      greet = 'Good Evening';
+
+    setGreeting(`${greet},  ${user.name}!`)
+  }
+}
+
   useEffect(() => {
-    getUserInfo();
+    getUserInfo()
     getDailyStats();
     getData();
+    getGetting(user);
   }, []);
 
   const profileUpSize = {
@@ -65,12 +90,12 @@ const Dashboard = () => {
         <section className="subconleft-dash">
           <div className="upleftsub">
             <div className="upleftsub-head">
-              <h1>My Activity</h1>
+              <h1>{greeting}</h1>
             </div>
             <div className="upleftsub-board">
               <div className="goal-dash">
                 <div className="headgoal-dash">
-                  <img src="./assets/icons8-trophy-100.png" alt="" />
+                  <img src={goalIcon} alt="" />
                   <h3>Goal</h3>
                 </div>
                 <div className="inspiration-goal-dash">
@@ -82,7 +107,7 @@ const Dashboard = () => {
                     <h1 className="goal-content-input1">
                       {goalAchieved || "0"}
                     </h1>
-                    <h2>out of</h2>
+                    <h2> out of </h2>
                     <h2 className="goal-content-input2">
                       {user.weekly_goal || "7"}
                     </h2>
@@ -96,7 +121,7 @@ const Dashboard = () => {
               </div>
               <div className="graph-dash">
                 <div className="headtracking">
-                  <img src="./assets/icons8-futures-100.png" alt="" />
+                  <img src={trackIcon} alt="" />
                   <p>Track History</p>
                 </div>
                 <div className="bar-chart-tracking">
@@ -108,7 +133,7 @@ const Dashboard = () => {
           <div className="downleftsub-board">
             <div className="head-recentact">
               <img
-                src="./assets/icons8-track-and-field-skin-type-1-100.png"
+                src={recentIcon}
                 alt=""
               />
               <p>Recent Activities</p>
@@ -119,9 +144,9 @@ const Dashboard = () => {
           </div>
         </section>
 
-      
 
-      {/*<session className="subconright-dash">
+
+        {/*<session className="subconright-dash">
         <div className="upright-dash">
           {/* only set backgroung color 
           <img src="#" alt="" />
