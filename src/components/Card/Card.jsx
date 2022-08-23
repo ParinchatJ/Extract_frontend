@@ -12,7 +12,7 @@ const Card = ({ card, onRemove }) => {
     }
 
     const editCard = () => {
-        navigate(`../user/edit/${card._id}`)
+        navigate(`/user/edit/${card._id}`)
     }
 
 
