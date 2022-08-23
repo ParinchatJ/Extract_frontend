@@ -14,7 +14,7 @@ export const ActivityForm = () => {
         // setSelectedActivity(data)
         console.log(data)
         reset()
-        navigate('../activities');
+        navigate('../user/activities');
     }
 
     return (

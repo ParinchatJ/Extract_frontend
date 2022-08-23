@@ -1,5 +1,5 @@
 import React from "react";
-
+import buttonImage from '/assets/akar-icons_circle-plus-fill.png'
 import "./ButtonAddAct.css";
 
 function ButtonAddAct() {
@@ -9,7 +9,7 @@ function ButtonAddAct() {
   return (
     <div>
       <a href='/new'>
-        <img src="./assets/akar-icons_circle-plus-fill.png" alt="" style={buttonSize}/>
+        <img src={buttonImage} alt="" style={buttonSize}/>
       </a>
     </div>
   );

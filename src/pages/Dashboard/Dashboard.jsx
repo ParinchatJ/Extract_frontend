@@ -19,7 +19,7 @@ const Dashboard = () => {
   const getDailyStats = async () => {
     setLoading(true);
     const response = await api.get("user/activities/daily-stats");
-    console.log(response.data);
+    // console.log(response.data);
     setDailyStats(response.data);
     setLoading(false);
   };
@@ -44,7 +44,7 @@ const Dashboard = () => {
       }
     });
     goalAchieved = achievedDays.length;
-    console.log(achievedDays.length);
+    // console.log(achievedDays.length);
   };
   getGoalAchieved();
 
@@ -125,7 +125,9 @@ const Dashboard = () => {
           </div>
         </section>
 
-        {/*<session className="subconright-dash">
+      
+
+      {/*<session className="subconright-dash">
         <div className="upright-dash">
           {/* only set backgroung color 
           <img src="#" alt="" />
