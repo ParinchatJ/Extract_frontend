@@ -7,6 +7,10 @@
     .container-signup .img-signup{
       display: none;
     }
+    .container-signup .form-signup {
+        width: 100%;
+    }
+
   }
   
  .img-signup {
