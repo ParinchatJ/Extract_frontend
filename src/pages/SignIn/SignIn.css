@@ -4,15 +4,13 @@
 
 .container-signin {
   display: flex;
-  justify-content: space-between;
   width: 100%;
-  min-height: 100vh;
 }
 
 .container-sigin-form {
   display: flex;
   justify-content: center;
-  margin-top: 15%;
+  align-items: center;
 }
 
 .container-signin section {
@@ -31,6 +29,7 @@
 
 .container-signin .img-signin {
   background-color: #c7bef3;
+  border-left: 2px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,8 +47,9 @@
 .container-signin .form-signin {
   display: flex;
   flex-direction: column;
-  align-items: space-between;
-  height: 100vh;
+  padding: 0;
+  width: 50%;
+  gap: 25% 0;
 }
 
 .container-signin .formsign h1 {
