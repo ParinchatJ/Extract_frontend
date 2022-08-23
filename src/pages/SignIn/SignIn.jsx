@@ -8,7 +8,7 @@ const SignIn = () => {
         <div className='container-signin'>
             <section className="form-signin">
                 <NavBar />
-                <div className='container'>
+                <div className='container-sigin-form'>
                     <SignInForm />
                 </div>
             </section>
