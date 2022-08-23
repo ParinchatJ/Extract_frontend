@@ -1,5 +1,5 @@
 import React from "react";
-
+import './HomePage.css'
 import ButtonHomePage from '../../components/ButtonHomePage/ButtonHomePage'
 import NavBar from "../../components/NavBar/NavBar";
 
