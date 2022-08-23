@@ -1,2 +1,29 @@
+.container-setgoal {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
 
+.container-setgoal .left-setgoal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
 
+.container-setgoal .right-setgoal {
+  background-color: #B0EAD2;
+  border-left: 2px solid black;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-setgoal .right-setgoal img {
+  width: 720px;
+  height: 740px;
+}

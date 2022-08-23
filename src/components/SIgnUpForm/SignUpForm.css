@@ -1,50 +1,6 @@
-.container-signup {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  .container-signup {
-    display: flex;
-    flex-direction: column;
-  }
-  .container-signup .img-signup{
-    display: none;
-  }
-}
-
-.container-signup .img-signup {
-  width: 50%;
-  height: 150vh;
-  background-color: #fb9b8b;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
 
 
-.container-signup .img-signup .pic1 {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
-.container-signup .img-signup img {
-  width: 640px;
-  padding-left: 30px;
-}
-
-.container-signup .left-signup {
-  padding: 50px;
-}
-
-.container-signup .form-signup {
-  display: flex;
-  flex-direction: column;
-}
-
-.container-signup .formsignup {
+.form-signup {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,7 +10,7 @@
   padding-bottom: 20px;
 }
 
-.container-signup .formsignup h2 {
+.formsignup h2 {
   font-size: 40px;
   margin: 0 0 30px 0;
   display: inline-flex;

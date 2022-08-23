@@ -60,7 +60,6 @@ const Dashboard = () => {
   };
   return (
     <div className="dash-board">
-      <NavBar />
       <div className="container-dash">
         <ProfileSession user={user} />
         <section className="subconleft-dash">
