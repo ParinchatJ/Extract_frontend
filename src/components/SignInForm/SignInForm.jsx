@@ -2,7 +2,6 @@ import "./SignInForm.css";
 import { appendErrors, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import api from "/configs/api";
-import NavBar from "../NavBar/NavBar";
 
 const SignInForm = () => {
   const navigate = useNavigate();
@@ -24,7 +23,7 @@ const SignInForm = () => {
       .then(() => {
         console.log("login success");
         window.alert("login success, welcome!");
-        navigate("../dashboard");
+        navigate("../user/dashboard");
       })
       .catch(() => {
         console.log("Login failed");
@@ -37,10 +36,8 @@ const SignInForm = () => {
   };
 
   return (
-    <div className="container-signin">
-      <section className="form-signin">
-        <NavBar />
-        <div className="formsign">
+    <div className="signin">
+        {/* <div className="formsign"> */}
           <h1>Sign In</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="account">Username/Email</label>
@@ -67,12 +64,7 @@ const SignInForm = () => {
             <br />
             <button>Sign In</button>
           </form>
-        </div>
-      </section>
-
-      <section className="img-signin">
-        <img src="./assets/bubble-gum-workflow.gif" alt="" />
-      </section>
+        {/* </div> */}
     </div>
   );
 };

@@ -5,7 +5,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import api from '/configs/api'
 import "./Dashboard.css";
 import CartList from '../../components/CartList/CardList';
-
+import goal from '/assets/Group 36.png'
 
 const Dashboard = () => {
   const [cards, setCards] = useState([])
@@ -20,7 +20,7 @@ const Dashboard = () => {
   const getDailyStats = async () => {
     setLoading(true)
     const response = await api.get('user/activities/daily-stats')
-    console.log(response.data)
+    // console.log(response.data)
     setDailyStats(response.data)
     setLoading(false)
   }
@@ -45,7 +45,7 @@ const Dashboard = () => {
       }
     })
     goalAchieved = achievedDays.length
-    console.log(achievedDays.length)
+    // console.log(achievedDays.length)
   }
   getGoalAchieved()
 
@@ -69,7 +69,7 @@ const Dashboard = () => {
           <div className="upleftsub-head">
             <h1>My Activity</h1>
             <div className="userhead">
-              <img src="./assets/Group 36.png" alt="" style={profileUpSize} />
+              <img src={goal} alt="" style={profileUpSize} />
               <p>@{user.username || 'username'}</p>
             </div>
           </div>
@@ -125,7 +125,7 @@ const Dashboard = () => {
         </div>
       </section>
 
-      
+
 
       {/*<session className="subconright-dash">
         <div className="upright-dash">

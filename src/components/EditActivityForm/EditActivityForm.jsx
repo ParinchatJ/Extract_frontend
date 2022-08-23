@@ -17,7 +17,7 @@ export const EditActivityForm = ({ activity_id, selectedActivity, setSelectedAct
         const response = await api.patch(`user/activities/${activity_id}`, data)
         setSelectedActivity(data)
         reset()
-        navigate('/activities');
+        navigate('/user/activities');
     }
 
     return (

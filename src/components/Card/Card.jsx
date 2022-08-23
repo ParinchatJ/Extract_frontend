@@ -1,5 +1,8 @@
 import './Card.css'
 import { useNavigate } from 'react-router';
+import remove from '/assets/remove.png'
+import edit from '/assets/edit.png'
+
 
 const Card = ({ card, onRemove }) => {
     const navigate = useNavigate()
@@ -9,7 +12,7 @@ const Card = ({ card, onRemove }) => {
     }
 
     const editCard = () => {
-        navigate(`../edit/${card._id}`)
+        navigate(`../user/edit/${card._id}`)
     }
 
 
@@ -20,10 +23,10 @@ const Card = ({ card, onRemove }) => {
                     <p>{card.date.split('T')[0]}</p>
                     <div className='card-button'>
                         <a onClick={removeCard}>
-                            <img src='./assets/remove.png' className="remove" alt='remove' />
+                            <img src={remove} className="remove" alt='remove' />
                         </a>
                         <a onClick={editCard}>
-                            <img src='./assets/edit.png' className="edit" alt='edit' />
+                            <img src={edit} className="edit" alt='edit' />
                         </a>
                     </div>
                 </div>

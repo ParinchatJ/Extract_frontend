@@ -48,7 +48,7 @@ const MyActivity = () => {
 
   return (
     <>
-    <NavBar />
+    {/* <NavBar /> */}
     <div className="my-activity">
       {/* <div className='sidebar'>
         <h1>sidebar</h1>

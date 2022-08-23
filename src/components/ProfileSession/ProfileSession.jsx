@@ -5,14 +5,15 @@ import "./ProfileSession.css";
 
 const ProfileSession = ({ user }) => {
 
-  let age = 0
+  let age = 99
   let birthdate = ''
-  if (user.date_of_birth) {
-    birthdate = user.date_of_birth.slice(0, 10);
-    let year = Number(user.date_of_birth.substr(0, 4))
-    let today = new Date();
-    age = today.getFullYear() - year
-  }
+  // if (!user.date_of_birth) {
+  //   birthdate = user.date_of_birth.slice(0, 10);
+  //   birthdate = '1998-08-23';
+  // let year = Number(1998)
+  // let today = new Date();
+  // age = today.getFullYear() - year
+  // }
 
 
 
@@ -44,7 +45,7 @@ const ProfileSession = ({ user }) => {
           <p className="profile-bio">Bio</p>
           <div className="perdata">
             <p>Name: {user.name || 'Anonymous'}</p>
-            <p>Birth Date: {birthdate || '0000-00-00'}</p>
+            <p>Birth Date: {birthdate || (new Date()).toString()}</p>
             <p>Age: {age || '99'}</p>
           </div>
           <ButtonAddAct />

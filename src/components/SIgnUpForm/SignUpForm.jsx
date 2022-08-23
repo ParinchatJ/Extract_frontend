@@ -20,16 +20,10 @@ const SignUpForm = () => {
         // }
     });
 
-  const onSubmit = (data) => {
-    api
-      .post("auth/signup", { ...data })
-      .then(() => {
-        console.log(data);
-      })
-      .then(() => {
-                console.log(document.cookie)
-        navigate("../dashboard");
-      });
+  const onSubmit = async (data) => {
+    const response = await api.post("auth/signup", data)
+    console.log(response.data);
+    navigate("../setgoal");
   };
 
   return (
@@ -151,7 +145,7 @@ const SignUpForm = () => {
               <span>What's your weight?</span>
             )}
 
-            <input type="submit" />
+            <button type="submit"> Continue</button>
           </form>
         </div>
       </section>
