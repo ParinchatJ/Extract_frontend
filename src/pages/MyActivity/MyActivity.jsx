@@ -14,14 +14,14 @@ const MyActivity = () => {
   const [loading, setLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
   const [cardPerPage] = useState(5)
-
+  
   const getData = async () => {
     setLoading(true)
     const response = await api.get('user/activities')
     setCards(response.data)
     setLoading(false)
   }
-  
+
   useEffect(() => {
     getData()
   }, [])
@@ -48,28 +48,28 @@ const MyActivity = () => {
 
   return (
     <>
-    {/* <NavBar /> */}
-    <div className="my-activity">
-      {/* <div className='sidebar'>
+      {/* <NavBar /> */}
+      <div className="my-activity">
+        {/* <div className='sidebar'>
         <h1>sidebar</h1>
       </div> */}
-      <div className='container'>
-        <h1>My Activity</h1>
-        <ButtonAddAct />
+        <div className='container'>
+          <h1>My Activity</h1>
+          <ButtonAddAct />
+        </div>
+        <Pagination
+          cardPerPage={cardPerPage}
+          totalCards={cards.length}
+          paginate={paginate}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
+        <CartList
+          cards={currentCards}
+          onRemove={removeCard}
+          loading={loading}
+        />
       </div>
-      <Pagination
-        cardPerPage={cardPerPage}
-        totalCards={cards.length}
-        paginate={paginate}
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-      />
-      <CartList
-        cards={currentCards}
-        onRemove={removeCard}
-        loading={loading}
-      />
-    </div>
     </>
   )
 }
