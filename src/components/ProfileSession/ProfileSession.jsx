@@ -5,14 +5,24 @@ import "./ProfileSession.css";
 
 const ProfileSession = ({ user }) => {
 
-  let age = 99
+  let age = 0
   let birthdate = ''
   if (user.date_of_birth) {
     birthdate = user.date_of_birth.slice(0, 10);
-    let year = Number(1998)
+    let birthyear = user.date_of_birth.slice(0, 4);
+    let year = Number(birthyear)
     let today = new Date();
     age = today.getFullYear() - year
   }
+
+  // if (user.date_of_birth) {
+  //   birthdate = user.date_of_birth.slice(0, 10);
+  //   let birthyear = user.date_of_birth.slice(0, 4);
+  //   let today = new Date();
+  //   let year = Number(birthyear)
+  //   age = today.getFullYear() - year
+  // }
+
 
   return (
     <div className="subconright-dash">
@@ -42,7 +52,7 @@ const ProfileSession = ({ user }) => {
           <div className="perdata">
             <p>Name: {user.name || 'Anonymous'}</p>
             <p>Birth Date: {birthdate}</p>
-            <p>Age: {age || '99'}</p>
+            <p>Age: {age || '0'}</p>
           </div>
           <ButtonAddAct />
         </div>
