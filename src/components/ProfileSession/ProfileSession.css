@@ -39,13 +39,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 60px;
+}
+
+.subconright-dash .downright-dash .content1 .nameprofile h2 {
+    padding-bottom: 10px;
+    font-size: 2rem;
+}
+
+.subconright-dash .downright-dash .content1 .nameprofile p {
+    font-size: 1rem;
 }
 
 .subconright-dash .downright-dash .content1 .inspiration-input-profile {
     display: flex;
     align-items: center;
-    margin: 20px 0 10px 0;
+    margin: 15px 0 10px 0;
+    justify-content: center;
+    font-size: 1.25rem;
 }
 
 .subconright-dash .downright-dash .content2 {
@@ -115,7 +126,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 65%;
+    width: 57%;
     margin-top: 20px;
     margin-bottom: 23px;
 }
