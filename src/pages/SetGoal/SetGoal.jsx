@@ -10,6 +10,7 @@ function SetGoal() {
   return (
     <div className="container-setgoal">
       <section className="left-setgoal">
+      <NavBar />
         <SetGoalForm user='' isUpdate={false} />
       </section>
       <section className="right-setgoal">

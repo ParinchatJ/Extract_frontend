@@ -18,14 +18,14 @@
   width: 50%;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .container-signin .img-signin, .container-signin .img-signin img {
     display: none;
   }
   .container-signin .form-signin .container-sigin-form {
     width: 100%;
   }
-}
+} */
 
 .container-signin .img-signin {
   background-color: #c7bef3;
@@ -65,3 +65,11 @@
   /* padding-top: 100px; */
 }
 
+@media (max-width: 768px) {
+  .img-signin, .img-signin img, .container-signin .img-signin {
+    display: none;
+  }
+  .container-signin .form-signin {
+    width: 100%;
+  }
+}
