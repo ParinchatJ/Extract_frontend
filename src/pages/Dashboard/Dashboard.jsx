@@ -42,7 +42,7 @@ const Dashboard = () => {
   // count goal avachieved day
   let goalAchieved = 0;
   const getGoalAchieved = () => {
-    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000 + (7 * 60 * 60 * 1000));
     const achievedDays = dailyStats.filter((day) => {
       if (Date.parse(day._id) >= Date.parse(sevenDaysAgo)) {
         return day;
