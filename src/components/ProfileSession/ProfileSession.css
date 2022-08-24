@@ -57,7 +57,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #000;
+    border: 2px solid #000;
     background-color: #fff;
     border-radius: 10px;
     padding: 15px 35px 15px 35px;
@@ -77,7 +77,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #000;
+    border: 2px solid #000;
     background-color: white;
     border-radius: 10px;
     padding: 15px 35px 15px 35px;
@@ -108,7 +108,7 @@
 }
 
 .subconright-dash .downright-dash .content3 .perdata {
-    border: 1px solid #000;
+    border: 2px solid #000;
     background-color: white;
     border-radius: 10px;
     padding: 15px 35px 15px 35px;
