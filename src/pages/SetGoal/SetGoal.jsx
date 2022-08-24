@@ -37,7 +37,7 @@ function SetGoal() {
         <SetGoalForm user='' />
       </section>
       <section className="right-setgoal">
-        <img src="/assets/bubble-gum-success.gif"/>
+        <img src="/assets/bubble-gum-success.gif" alt=''/>
       </section>
     </div>
   )
