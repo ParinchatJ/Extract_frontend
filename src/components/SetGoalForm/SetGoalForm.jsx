@@ -5,30 +5,26 @@ import api from "/configs/api";
 
 import "./SetGoalForm.css";
 
-const SetGoalForm = ({ user }) => {
+const SetGoalForm = ({ user, isUpdate }) => {
   const navigate = useNavigate();
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
   const updateGoal = (data) => {
     // console.log('test', data)
     api.patch('user/goal', data)
-    .then(response => {
-      // console.log(response.data)
-      window.alert('goal setted')
-      navigate('/user/dashboard');
-    }).catch(error => { console.log(error) });
-}
-
-
+      .then(response => {
+        // console.log(response.data)
+        window.alert('goal setted')
+        navigate('/user/dashboard');
+      }).catch(error => { console.log(error) });
+  }
 
   return (
     <div className='setgoal'>
       <h2>Set Goal</h2>
       <form className='set-goal' onSubmit={handleSubmit(updateGoal)}>
         <label htmlFor='weekly_goal' >Weekly Goal (days/week)</label>
-{
-  user.weekly_goal &&
-  <>
+        {/* {scaleForm()} */}
         <input 
         type="range"
         step='1'
@@ -51,8 +47,6 @@ const SetGoalForm = ({ user }) => {
           errors.weekly_goal && 
           <p className="error">Weekly Goal is required</p>
         }
-          </>
-}
         <br />
 
         <label htmlFor="goal_weight">Goal Weight</label>
@@ -61,10 +55,10 @@ const SetGoalForm = ({ user }) => {
           step="0.01"
           defaultValue={user.goal_weight}
           placeholder="weight (kg)"
-          {...register("goal_weight", { min: 0.5, max: 200})}
+          {...register("goal_weight", { min: 0.5, max: 200 })}
         />
         {
-        errors.weight && 
+          errors.weight &&
           <p className="error">Goal Weight is required.</p>
         }
         <br />
@@ -73,13 +67,13 @@ const SetGoalForm = ({ user }) => {
         <textarea
           placeholder="inspiration"
           defaultValue={user.inspiration}
-          {...register("inspiration")}
-        >{user.inspiration}</textarea>
+          {...register("inspiration")}/>
+        {/* >{user.inspiration}</textarea> */}
         {
-        errors.inspiration&& 
+          errors.inspiration &&
           <p className="error">Inspirations is required</p>
         }
-        <button type='submit'>{ user ? 'Save': 'Create Account'}</button>
+        <button type='submit'>{user ? 'Save' : 'Create Account'}</button>
       </form>
     </div>
   );

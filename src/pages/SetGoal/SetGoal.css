@@ -1,24 +1,21 @@
 .container-setgoal {
-  display: flex;
+  display: inline-flex;
+  justify-content: space-between;
   width: 100%;
+  /* align-items: center; */
+  /* flex-direction: column; */
 }
 
 .container-setgoal .left-setgoal {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  padding: 0;
-  width: 50%;
-  gap: 25% 0;
-}
-
-.container-setgoal .left-setgoal .div-form-setgoal {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center; */
+  width: 50%;
 }
 
 .container-setgoal .right-setgoal {
-  background-color: #b0ead2;
+  background-color: #B0EAD2;
   border-left: 2px solid black;
   width: 50%;
   height: 100vh;
@@ -27,13 +24,30 @@
   align-items: center;
 }
 
-.container-setgoal .right-setgoal .picsg img {
+.container-setgoal .right-setgoal img {
   width: 720px;
   height: 740px;
 }
+.container-setgoal .setgoal {
+    align-items: center;
+    margin: 10rem;
+}
 
-.container-setgoal .right-setgoal .picsg {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+.container-setgoal h2 {
+ font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .right-setgoal img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container-setgoal .right-setgoal {
+    display: none;
+  }
+  .container-setgoal .left-setgoal {
+    width: 100%;
+  }
 }
