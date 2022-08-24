@@ -59,7 +59,7 @@ const SetGoalForm = ({ user, isUpdate }) => {
         />
         {
           errors.goal_weight &&
-          <p className="error">Goal Weight is required.</p>
+          <p className="error">Goal Weight must between 0.5 kg. and 200 kg</p>
         }
         <br />
 
