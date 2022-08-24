@@ -13,7 +13,7 @@ const SignIn = () => {
       </section>
       <section className="img-signup">
         <div className="pic1">
-          <img src="./assets/bubble-gum-success.gif" alt="" />
+          <img src="./assets/sammy-no-connection.gif" alt="" />
         </div>
       </section>
     </div>

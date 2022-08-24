@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SetGoalForm from "../../components/SetGoalForm/SetGoalForm";
+import NavBar from "../../components/NavBar/NavBar";
 
-import './SetGoal.css'
+import "./SetGoal.css";
 
 function SetGoal() {
-
   // const navigate = useNavigate();
   // const [user, setUser] = useState({});
 
@@ -30,17 +30,21 @@ function SetGoal() {
   //   }de
   // };
 
-
   return (
     <div className="container-setgoal">
       <section className="left-setgoal">
-        <SetGoalForm user='' />
+        <NavBar />
+        <div className="div-form-setgoal">
+          <SetGoalForm user="" />
+        </div>
       </section>
       <section className="right-setgoal">
-        <img src="/assets/bubble-gum-success.gif" alt=''/>
+        <div className="picsg">
+          <img src="./assets/bubble-gum-success.gif" alt="" />
+        </div>
       </section>
     </div>
-  )
+  );
 }
 
-export default SetGoal
+export default SetGoal;

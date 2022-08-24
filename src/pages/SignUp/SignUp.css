@@ -26,9 +26,9 @@
     align-content: center;
   }
   
-  .container-signup .img-signup img {
-    width: 640px;
-    padding-left: 30px;
+  .container-signup .img-signup .pic1 img {
+    width: 720px;
+    height: 740px;
   }
   
   .container-signup .left-signup {
