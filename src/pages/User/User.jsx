@@ -22,10 +22,10 @@ useEffect(() => {
 
     if (isSignIn) {
         return (
-            <>
-            <NavBar/>
+            <div className="user">
+            <NavBar />
                 <Outlet />
-            </>
+            </div>
         )
     }
 }

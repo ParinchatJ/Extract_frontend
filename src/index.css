@@ -6,34 +6,25 @@ html, body {
   background-color: #FFFFF4
 } 
 #root {
-  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 0;
-  /* text-align: center; */
 }
-
-
-/* :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-} */
-
 
 h1 {
   margin: 0;
 }
 
 p {
-  /* font-family: 'Inter', sans-serif; */
   font-family: 'DM Sans', sans-serif;
+}
+
+button {
+    font-family: 'Space Grotesk', sans-serif;
+  
 }
 
 form{
   margin: 2rem;;
-  /* width: 720px; */
-  /* width: 700px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
