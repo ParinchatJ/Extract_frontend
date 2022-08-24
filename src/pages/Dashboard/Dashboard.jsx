@@ -38,10 +38,11 @@ const Dashboard = () => {
     setCards(response.data);
   };
 
-  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
 
+  // count goal avachieved day
   let goalAchieved = 0;
   const getGoalAchieved = () => {
+    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
     const achievedDays = dailyStats.filter((day) => {
       if (Date.parse(day._id) >= Date.parse(sevenDaysAgo)) {
         return day;
@@ -57,26 +58,29 @@ const Dashboard = () => {
   const [greeting, setGreeting] = useState('Dashboard')
 
   const getGetting = (user) => {
-    if (user.name) {let greet;
-    let myDate = new Date();
-    let hrs = myDate.getHours();
+    // if (user.name) {
+      let greet;
+      let myDate = new Date();
+      let hrs = myDate.getHours();
 
-    if (hrs < 12)
-      greet = 'Good Morning';
-    else if (hrs >= 12 && hrs <= 17)
-      greet = 'Good Afternoon';
-    else if (hrs >= 17 && hrs <= 24)
-      greet = 'Good Evening';
+      if (hrs < 12)
+        greet = 'Good Morning';
+      else if (hrs >= 12 && hrs <= 17)
+        greet = 'Good Afternoon';
+      else if (hrs >= 17 && hrs <= 24)
+        greet = 'Good Evening';
 
-    setGreeting(`${greet},  ${user.name}!`)
+      setGreeting(`${greet},  ${user.name}!`)
+    // }
   }
-}
 
   useEffect(() => {
     getUserInfo()
     getDailyStats();
     getData();
-    getGetting(user);
+    if (user.name) {
+      getGetting(user);
+    }
   }, []);
 
   const profileUpSize = {
@@ -86,10 +90,14 @@ const Dashboard = () => {
   return (
     <div className="dash-board">
       <div className="container-dash">
-        <ProfileSession user={user} />
+        {
+          user &&
+          <ProfileSession user={user} />
+        }
         <section className="subconleft-dash">
           <div className="upleftsub">
             <div className="upleftsub-head">
+
               <h1>{greeting}</h1>
             </div>
             <div className="upleftsub-board">
@@ -156,7 +164,7 @@ const Dashboard = () => {
             <div className="nameprofile">
               <h2>John Doe</h2>
               <p>@username</p>
-            </div>
+              </div>
             <p>รับค่า inspiration มา</p>
           </div>
           <div className="content2">
@@ -165,7 +173,7 @@ const Dashboard = () => {
               <h2>166</h2>
             </div>
             <div className="weight">
-              <p>Weight</p>
+            <p>Weight</p>
               <h2>99</h2>
             </div>
           </div>
@@ -175,11 +183,11 @@ const Dashboard = () => {
               <p>Name: John Doe</p>
               <p>Birth Date: 1/1/1111</p>
               <p>Age: 22</p>
-            </div>
-            {/* <button /> ปุ่มบวก 
-          </div>
-        </div>
-      </session>*/}
+              </div>
+              {/* <button /> ปุ่มบวก 
+              </div>
+              </div>
+            </session>*/}
       </div>
     </div>
   );

@@ -1,26 +1,22 @@
 import React from "react";
 import ButtonAddAct from "../ButtonAddAct/ButtonAddAct";
-import getAvatar from "/public/assets/avatars/avatars.js";
+import getAvatar from "/public/assets/avatars/avatars";
 import "./ProfileSession.css";
 
 const ProfileSession = ({ user }) => {
 
   let age = 99
-  let birthdate = user.date_of_birth
-  // if (!user.date_of_birth) {
-  //   birthdate = user.date_of_birth.slice(0, 10);
-  //   birthdate = '1998-08-23';
-  // let year = Number(1998)
-  // let today = new Date();
-  // age = today.getFullYear() - year
-  // }
-
-
+  let birthdate = ''
+  if (user.date_of_birth) {
+    birthdate = user.date_of_birth.slice(0, 10);
+    let year = Number(1998)
+    let today = new Date();
+    age = today.getFullYear() - year
+  }
 
   return (
     <div className="subconright-dash">
       <div className="upright-dash">
-        {/* only set backgroung color */}
         <img src={getAvatar(user.profile_picture)} alt="" />
       </div>
       <div className="downright-dash">
