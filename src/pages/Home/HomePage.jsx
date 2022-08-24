@@ -29,12 +29,22 @@ function homePage() {
             </div>
           </div>
           <div className="mid-subcon2">
-            <h1>Keeping yourself motivated</h1>
-            <p>You can set your goal and inspirations to motivate yourself and design your future exercise easily!! Create a diary-like exercise. Help you enjoy exercising more and more.</p>
+            <img src="./assets/taxi-baseball-player.gif" alt="" />
+            <div className="subcon2-content">
+              <h1>Keeping yourself motivated</h1>
+              <p>
+                You can set your goal and inspirations to motivate yourself and design your future exercise easily!! Create a diary-like exercise. Help you enjoy exercising more and more.
+              </p>
+            </div>
           </div>
           <div className="right-subcon2">
-            <h1>Crate your own lifestyle</h1>
-            <p>Feel free to create your own workout lifestyle. Make exercise exciting!!!, have a plan, and please look forward to new features from us. to add more effective fitness tracking than ever before.</p>
+            <img src="/assets/transistor-man-on-bicycle.gif" alt="" />
+            <div className="subcon2-content">
+              <h1>Crate your own lifestyle</h1>
+              <p>
+                Feel free to create your own workout lifestyle. Make exercise exciting!!!, have a plan, and please look forward to new features from us. to add more effective fitness tracking than ever before.
+              </p>
+            </div>
           </div>
         </section>
 
