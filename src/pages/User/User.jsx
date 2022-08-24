@@ -7,22 +7,20 @@ const User = () => {
     const navigate = useNavigate()
   const [isSignIn, setIsSignIn] = useState(true)
 
-// useEffect(() => {
-//     api.get('user/me')
-//         .then(response => {
-//             console.clear()
-//             console.log(`account: @${response.data.username}`)
-//             setIsSignIn(true)
-//         })
-//         .catch(() => {
-//             console.log('no permission, please sign in first')
-//             navigate('/signin')
-//         })
-// },[])
-
-// const images = {
-//     remove: 
-// }
+useEffect(() => {
+    api.get('user/me')
+        .then(response => {
+            console.clear()
+            console.log(`account: @${response.data.username}`)
+            setIsSignIn(true)
+        })
+        .catch(() => {
+            console.clear()
+            console.log('account: -')
+            window.alert('no permission, please sign in first')
+            navigate('/signin')
+        })
+},[])
 
     if (isSignIn) {
         return (
