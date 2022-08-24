@@ -14,7 +14,7 @@ const Setting = () => {
   const getUserInfo = async () => {
     const response = await api.get("user/me");
     setUser(response.data);
-    console.log(response.data);
+    // console.log(response.data);
   };
 
   useEffect(() => {
@@ -30,15 +30,15 @@ const Setting = () => {
       });
     }
   };
-
+  
   return (
     <div className="setting">
       <h1>Setting</h1>
     <div className="container">
-      {user && (
+      {user.username && (
         <>
           <SettingForm user={user} />
-          <SetGoalForm user={user} />
+          <SetGoalForm user={user} isUpdate={true} />
         </>
       )}
     </div>
