@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NavBar from '../../components/NavBar/NavBar';
 import SetGoalForm from "../../components/SetGoalForm/SetGoalForm";
 
 import './SetGoal.css'

@@ -41,7 +41,7 @@ const SignInForm = () => {
           <h1>Sign In</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="account">Username/Email</label>
-            <br />
+            {/* <br /> */}
             <input
               type="text"
               placeholder="Username/Email"
@@ -52,7 +52,7 @@ const SignInForm = () => {
             )}
             <br />
             <label htmlFor="password">Password</label>
-            <br />
+            {/* <br /> */}
             <input
               type="password"
               placeholder="Password"
