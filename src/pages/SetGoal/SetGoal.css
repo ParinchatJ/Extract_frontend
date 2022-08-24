@@ -27,3 +27,10 @@
   width: 720px;
   height: 740px;
 }
+.container-setgoal .setgoal {
+    align-items: center;
+}
+
+.container-setgoal h2 {
+ font-size: 2.5rem;
+}

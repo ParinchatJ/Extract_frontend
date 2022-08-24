@@ -25,7 +25,7 @@ const SignUpForm = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <h2>Create Account</h2>
         <label htmlFor="username">Username</label>
-        <br />
+        {/* <br /> */}
         <input
           {...register("username", {
             required: true,
@@ -35,7 +35,7 @@ const SignUpForm = () => {
           id="username"
           placeholder="Username"
         />
-        <br />
+        {/* <br /> */}
         {errors.username && errors.username.type === "required" && (
           <span className="error-signup">Invalid or empty username.</span>
         )}
@@ -49,7 +49,7 @@ const SignUpForm = () => {
         <br />
 
         <label htmlFor="name">Name</label>
-        <br />
+        {/* <br /> */}
         <input
           {...register("name", {
             required: true,
@@ -59,7 +59,7 @@ const SignUpForm = () => {
           id="name"
           placeholder="Name"
         />
-        <br />
+        {/* <br /> */}
         {errors.name && errors.name.type === "required" && (
           <span className="error-signup">What's your name?</span>
         )}
@@ -73,20 +73,20 @@ const SignUpForm = () => {
         <br />
 
         <label htmlFor="email">Email</label>
-        <br />
+        {/* <br /> */}
         <input
           {...register("email", { required: true })}
           type="email"
           placeholder="email"
         />
-        <br />
+        {/* <br /> */}
         {errors.email && errors.email.type === "required" && (
           <span className="error-signup">Please enter a valid email.</span>
         )}
         <br />
 
         <label htmlFor="password">Password</label>
-        <br />
+        {/* <br /> */}
         <input
           {...register("password", {
             required: true,
@@ -109,9 +109,9 @@ const SignUpForm = () => {
             </span>
           )}
 
-        <br />
+        {/* <br /> */}
         <label htmlFor="date_of_birth">Date of Birth</label>
-        <br />
+        {/* <br /> */}
         <input
           {...register("date_of_birth", { required: true })}
           id="date_of_birth"
@@ -121,28 +121,28 @@ const SignUpForm = () => {
         <br />
 
         <label htmlFor="height">Height</label>
-        <br />
+        {/* <br /> */}
         <input
           {...register("height", { required: true })}
           id="height"
           type="number"
           placeholder="Height(cm)"
         />
-        <br />
+        {/* <br /> */}
         {errors.height && errors.height.type === "required" && (
           <span className="error-signup">What's your height?</span>
         )}
         <br />
 
         <label htmlFor="weight">Weight</label>
-        <br />
+        {/* <br /> */}
         <input
           {...register("weight", { required: true })}
           id="weight"
           type="number"
           placeholder="Weight(kg)"
         />
-        <br />
+        {/* <br /> */}
         {errors.weight && errors.weight.type === "required" && (
           <span className="error-signup">What's your weight?</span>
         )}
