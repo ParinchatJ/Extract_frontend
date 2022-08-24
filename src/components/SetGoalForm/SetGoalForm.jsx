@@ -7,21 +7,13 @@ import "./SetGoalForm.css";
 
 const SetGoalForm = ({ user }) => {
   const navigate = useNavigate();
-
-  const { register, handleSubmit, watch, formState: { errors } } = useForm({
-    defaultValues: {
-      weekly_goal: user.weekly_goal,
-      goal_weight: user.goal_weight,
-      inspiration: user.inspiration
-
-    }
-  });
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
   const updateGoal = (data) => {
-    console.log('test', data)
+    // console.log('test', data)
     api.patch('user/goal', data)
     .then(response => {
-      console.log(response.data)
+      // console.log(response.data)
       window.alert('goal setted')
       navigate('/user/dashboard');
     }).catch(error => { console.log(error) });
@@ -34,7 +26,9 @@ const SetGoalForm = ({ user }) => {
       <h2>Set Goal</h2>
       <form className='set-goal' onSubmit={handleSubmit(updateGoal)}>
         <label htmlFor='weekly_goal' >Weekly Goal (days/week)</label>
-
+{
+  user.weekly_goal &&
+  <>
         <input 
         type="range"
         step='1'
@@ -42,7 +36,7 @@ const SetGoalForm = ({ user }) => {
         max='7'
         className='scale'
         defaultValue={user.weekly_goal}
-        {...register("weekly_goal")}
+        {...register('weekly_goal')}
         />
          <div className='scale-num'>
           <p>1</p>
@@ -54,9 +48,11 @@ const SetGoalForm = ({ user }) => {
           <p>7</p>
          </div>
         {
-        errors.weekly_goal && 
+          errors.weekly_goal && 
           <p className="error">Weekly Goal is required</p>
         }
+          </>
+}
         <br />
 
         <label htmlFor="goal_weight">Goal Weight</label>
@@ -76,7 +72,7 @@ const SetGoalForm = ({ user }) => {
         <label htmlFor="inspiration">inspiration</label>
         <textarea
           placeholder="inspiration"
-          // defaultValue={user.inspiration}
+          defaultValue={user.inspiration}
           {...register("inspiration")}
         >{user.inspiration}</textarea>
         {

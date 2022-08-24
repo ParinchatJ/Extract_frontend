@@ -8,21 +8,7 @@ import "./SignUpForm.css";
 
 const SignUpForm = () => {
   const navigate = useNavigate();
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    // defaultValues: {
-    //     username: '',
-    //     name: '',
-    //     email: '',
-    //     password: '',
-    //     dateOfBirth: '',
-    //     height: '',
-    //     weight: ''
-    // }
-  });
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = async (data) => {
     const response = await api.post("auth/signup", data);
@@ -61,7 +47,7 @@ const SignUpForm = () => {
             </span>
           )}
         <br />
-        
+
         <label htmlFor="name">Name</label>
         <br />
         <input
@@ -85,7 +71,7 @@ const SignUpForm = () => {
             </span>
           )}
         <br />
-       
+
         <label htmlFor="email">Email</label>
         <br />
         <input
@@ -98,7 +84,7 @@ const SignUpForm = () => {
           <span className="error-signup">Please enter a valid email.</span>
         )}
         <br />
-      
+
         <label htmlFor="password">Password</label>
         <br />
         <input
@@ -122,18 +108,18 @@ const SignUpForm = () => {
               Your password must be between 8-16 characters.
             </span>
           )}
-       
+
         <br />
-        <label htmlFor="dateOfBirth">Date of Birth</label>
+        <label htmlFor="date_of_birth">Date of Birth</label>
         <br />
         <input
-          {...register("dateOfBirth", { required: true })}
-          id="dateOfBirth"
+          {...register("date_of_birth", { required: true })}
+          id="date_of_birth"
           type="date"
           placeholder="Date of birth"
         />
         <br />
-     
+
         <label htmlFor="height">Height</label>
         <br />
         <input
@@ -147,7 +133,7 @@ const SignUpForm = () => {
           <span className="error-signup">What's your height?</span>
         )}
         <br />
-       
+
         <label htmlFor="weight">Weight</label>
         <br />
         <input
