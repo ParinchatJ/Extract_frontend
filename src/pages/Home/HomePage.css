@@ -63,11 +63,18 @@
   min-width: auto;
 }
 
-.subcon2 .left-subcon2 img {
+.subcon2 .left-subcon2 img, .subcon2 .right-subcon2 img {
   margin: 50px 30px 30px 30px;
   height: 187px;
   width: 177px;
 }
+
+.subcon2 .mid-subcon2 img {
+  margin: 50px 30px 30px 30px;
+  height: 187px;
+  width: 240px;
+}
+
 
 .subcon2 .left-subcon2 .subcon2-content h1,
 .subcon2 .mid-subcon2 h1,
