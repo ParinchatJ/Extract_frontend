@@ -58,7 +58,7 @@ const SetGoalForm = ({ user, isUpdate }) => {
           {...register("goal_weight", { min: 0.5, max: 200 })}
         />
         {
-          errors.weight &&
+          errors.goal_weight &&
           <p className="error">Goal Weight is required.</p>
         }
         <br />
