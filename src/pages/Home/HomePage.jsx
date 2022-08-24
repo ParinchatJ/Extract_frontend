@@ -30,11 +30,11 @@ function homePage() {
           </div>
           <div className="mid-subcon2">
             <h1>Keeping yourself motivated</h1>
-            <p>Can set your goal and inspirations to motivate yourself.</p>
+            <p>You can set your goal and inspirations to motivate yourself and design your future exercise easily!!</p>
           </div>
           <div className="right-subcon2">
             <h1>Crate your own lifestyle</h1>
-            <p>Feel free to create your own workout lifestyle.</p>
+            <p>Feel free to create your own workout lifestyle. Make exercise exciting!!!, have a plan, and please look forward to new features from us. to add more effective fitness tracking than ever before.</p>
           </div>
         </section>
 
@@ -43,7 +43,7 @@ function homePage() {
             <img src="./assets/home-page3.gif" alt="" />
             <div className="content-subcon3">
               <h1>
-                The pain you feel today will be the strength you feel tomorrow
+                The pain you feel today will be the strength you feel tomorrow 
               </h1>
               <p>– Arnold Schwarzenegger –</p>
             </div>
