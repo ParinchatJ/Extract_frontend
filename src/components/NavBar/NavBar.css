@@ -32,16 +32,6 @@
 
 /* set up button */
 
-.navbar .signinbutton {
-    /* margin-right: 30px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #DAFC3D;
-    height: 72px;
-    width: 140px;
-    border-left: 2px solid black;
-}
 
 .navbar .signupbutton {
     /* margin-right: 30px; */
@@ -58,10 +48,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #DAFC3D;
+    background-color: #000;
+    color: #fff;
     height: 72px;
     width: 140px;
     border-left: 2px solid black;
+}
+
+.navbar .startbutton:hover {
+    background-color: #DAFC3D;
+    color: #000;
+    transition: all 0.1s;
 }
 
 .navbar .settingbutton {
