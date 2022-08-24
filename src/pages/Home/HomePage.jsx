@@ -30,7 +30,7 @@ function homePage() {
           </div>
           <div className="mid-subcon2">
             <h1>Keeping yourself motivated</h1>
-            <p>You can set your goal and inspirations to motivate yourself and design your future exercise easily!! Create a diary-like exercise. Help you enjoy exercising more.</p>
+            <p>You can set your goal and inspirations to motivate yourself and design your future exercise easily!! Create a diary-like exercise. Help you enjoy exercising more and more.</p>
           </div>
           <div className="right-subcon2">
             <h1>Crate your own lifestyle</h1>
