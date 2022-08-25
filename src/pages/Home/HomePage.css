@@ -12,7 +12,11 @@
 
 .container-homepage .subcon1 {
   display: flex;
-  margin-bottom: 50px;
+  margin: auto;
+  /* margin-bottom: 50px; */
+  min-height: 93vh;
+  max-width: 1440px;
+  align-items: center;
 }
 
 .container-homepage .subcon1 .subcon1-content {
@@ -29,6 +33,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+  height: fit-content;
 }
 
 .container-homepage .subcon1 .subcon1-content h1 {
@@ -53,7 +58,7 @@
 .subcon2 {
   display: flex;
   justify-content: space-evenly;
-  background-color: #fa9a8a;
+  background-color: #e79eff;
 }
 
 .subcon2 .left-subcon2 {
@@ -130,7 +135,7 @@
 .container-homepage .subcon3 .body-subcon3 .content-subcon3 h1 {
   width: 85%;
   font-weight: 700;
-  font-size: 40px;
+  font-size:54px;
   line-height: 48px;
   margin-bottom: 30px;
 

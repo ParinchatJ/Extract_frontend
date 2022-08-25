@@ -55,7 +55,7 @@ function homePage() {
               <h1>
                 The pain you feel today will be the strength you feel tomorrow 
               </h1>
-              <p>– Arnold Schwarzenegger –</p>
+              <p><i>– Arnold Schwarzenegger –</i></p>
             </div>
           </div>
           <div className="bottom-subcon3">
